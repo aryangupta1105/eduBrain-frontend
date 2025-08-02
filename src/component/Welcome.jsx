@@ -50,17 +50,17 @@ const WhatMakesUsDifferent = () => {
           {features.slice(0, 4).map((feature) => (
             <div
               key={feature.id}
-              className="bg-[#121721] rounded-4xl p-6 text-center hover:bg-gray-750 transition-colors h-[183px] duration-200"
+              className="bg-[#121721] rounded-4xl p-6 text-center hover:bg-gray-750 transition-colors py-2 h-[190px] duration-200"
             >
               <img 
                 src={feature.image} 
                 alt={feature.title}
                 className="w-12 h-12 mx-auto mb-4"
               />
-              <h3 className="text-white text-xl font-semibold mb-3">
+              <h3 className="text-white text-2xl font-semibold mb-3">
                 {feature.title}
               </h3>
-              <p className="text-[#ABAEB2] text-sm leading-relaxed">
+              <p className="text-[#ABAEB2] text-md leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -69,16 +69,16 @@ const WhatMakesUsDifferent = () => {
 
         {/* Last feature centered */}
         <div className="flex justify-center -mt-5">
-          <div className="bg-[#121721] rounded-4xl p-6 text-center hover:bg-gray-750 transition-colors h-[183px] duration-200">
+          <div  className="bg-[#121721] rounded-4xl p-6 text-center text-wrap hover:bg-gray-750 transition-colors py-2 h-[190px] duration-200">
             <img 
               src={features[4].image} 
               alt={features[4].title}
               className="w-12 h-12 mx-auto mb-4"
             />
-            <h3 className="text-white text-xl font-semibold mb-3">
+            <h3 className="text-white text-2xl font-semibold mb-3">
               {features[4].title}
             </h3>
-            <p className="text-[#ABAEB2] text-sm">
+            <p className="text-[#ABAEB2] text-wrap w-9/12 mx-auto text-md">
               {features[4].description}
             </p>
           </div>
