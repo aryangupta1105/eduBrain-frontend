@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ onLoginClick }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,11 +15,12 @@ const Navbar = ({ onLoginClick }) => {
   }, []);
 
   const navItems = [
-    { name: "About Us", href: "#about" },
-    { name: "Courses", href: "#courses" },
-    { name: "Process", href: "#process" },
-    { name: "Certification", href: "#certification" },
-    { name: "FAQ", href: "#faq" },
+    { name: "About Us", to: "/#about" },
+    { name: "Courses", to: "/#courses" },
+    { name: "Process", to: "/#process" },
+    { name: "Certification", to: "/#certification" },
+    { name: "FAQ", to: "/#faq" },
+    { name: "Contact Us", to: "/contact" },
   ];
 
   return (
@@ -35,13 +37,13 @@ const Navbar = ({ onLoginClick }) => {
             {/* Center: Navigation */}
             <div className="hidden md:flex flex-1 justify-center space-x-6">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.href}
-                  className="text-white text-lg  tracking-wide transition"
+                  to={item.to}
+                  className="text-white text-lg tracking-wide transition"
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </div>
 
@@ -71,14 +73,14 @@ const Navbar = ({ onLoginClick }) => {
             <div className="md:hidden mt-3">
               <div className="bg-[#0C0C0D] rounded-lg px-4 py-3 space-y-2 shadow-md">
                 {navItems.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.to}
                     className="block text-gray-300 hover:text-white text-base font-medium transition"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
                 <button
   onClick={() => {
