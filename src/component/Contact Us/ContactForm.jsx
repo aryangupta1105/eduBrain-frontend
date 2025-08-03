@@ -47,7 +47,7 @@ export default function ContactForm() {
             placeholder="Your name"
             value={formData.name}
             onChange={handleInputChange}
-            className="box-border flex items-center px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-blue-600 border-solid bg-transparent text-neutral-400 max-sm:p-3 max-sm:text-sm"
+            className="box-border flex items-center px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid bg-transparent text-neutral-400 max-sm:p-3 max-sm:text-sm"
           />
         </div>
 
@@ -62,7 +62,7 @@ export default function ContactForm() {
             placeholder="Your email address"
             value={formData.email}
             onChange={handleInputChange}
-            className="box-border flex items-center px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-blue-600 border-solid bg-transparent text-neutral-400 max-sm:p-3 max-sm:text-sm"
+            className="box-border flex items-center px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid bg-transparent text-neutral-400 max-sm:p-3 max-sm:text-sm"
           />
         </div>
 
@@ -76,7 +76,7 @@ export default function ContactForm() {
             placeholder="Write your message here..."
             value={formData.message}
             onChange={handleInputChange}
-            className="box-border flex items-start px-4 py-2.5 w-full text-base leading-5 rounded-md border-2 border-blue-600 border-solid resize-none bg-transparent h-[143px] text-neutral-400 max-sm:p-3 max-sm:text-sm"
+            className="box-border flex items-start px-4 py-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid resize-none bg-transparent h-[143px] text-neutral-400 max-sm:p-3 max-sm:text-sm"
           />
         </div>
 
