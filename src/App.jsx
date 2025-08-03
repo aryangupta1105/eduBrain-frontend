@@ -22,6 +22,7 @@ import Reset from "./component/Resetpass";
 import LearningExperienceSection from "./component/Learning";
 import EduBrainingWebsite from "./component/About";
 import WhatMakesUsDifferent from "./component/Welcome";
+import ContactPage from "./component/Contact Us/ContactPage";
 
 export default function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -46,10 +47,30 @@ export default function App() {
     <Router>
       <div className="flex flex-col min-h-screen">
         <Navbar onLoginClick={handleLoginClick} />
-
         <main className="flex-grow">
           <Routes>
-            <Route path="/" element={<EduBrainingHero />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <EduBrainingHero />
+                  <LearningExperienceSection />
+                  <EduBrainingWebsite />
+                  <WhatMakesUsDifferent />
+                  {/*
+                    <TechCoursesSection />
+                    <SuccessPathInfographic />
+                    <CertificationAchievement />
+                    <InternshipOpportunities />
+                    <TestimonialsSection />
+                    <TechJourneyCTA />
+                    <FAQSection />
+                    <Footer />
+                  */}
+                </>
+              }
+            />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
 
           {showLogin && (
@@ -121,7 +142,6 @@ export default function App() {
             />
           )}
 
-
           {showResetPassword && (
             <Reset
               onClose={() => setShowResetPassword(false)}
@@ -150,21 +170,6 @@ export default function App() {
             />
           )}
         </main>
-
-        {/* Static Page Components */}
-        <LearningExperienceSection />
-        <EduBrainingWebsite />
-        <WhatMakesUsDifferent />
-        {/*
-  <TechCoursesSection />
-  <SuccessPathInfographic />
-  <CertificationAchievement />
-  <InternshipOpportunities />
-  <TestimonialsSection />
-  <TechJourneyCTA />
-  <FAQSection />
-  <Footer />
-*/}
       </div>
     </Router>
   );
