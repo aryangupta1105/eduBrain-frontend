@@ -24,13 +24,13 @@ export default function ContactForm() {
 
   return (
     <section
-      className="flex flex-col justify-center items-start gap-[29px] mx-auto w-[424px] h-[580px] p-0 flex-none order-1"
+      className="flex flex-col justify-center items-start gap-[29px] mx-auto w-full max-w-[424px] h-auto min-h-[480px] p-0 flex-none order-1 sm:max-w-[424px]"
     >
       <header className="flex flex-col gap-2 items-start w-full">
-        <h2 className="text-[40px] font-semibold leading-10 text-blue-600 max-md:text-3xl max-md:leading-8 max-sm:text-3xl max-sm:leading-7">
+        <h2 className="text-[32px] sm:text-[40px] font-semibold leading-10 text-blue-600 max-md:text-3xl max-md:leading-8 max-sm:text-2xl max-sm:leading-7">
           Contact Us
         </h2>
-        <p className="text-2xl text-neutral-400 max-md:text-lg max-sm:text-base">
+        <p className="text-lg sm:text-2xl text-neutral-400 max-md:text-lg max-sm:text-base">
           Feel free to drop us a message
         </p>
       </header>
@@ -47,7 +47,7 @@ export default function ContactForm() {
             placeholder="Your name"
             value={formData.name}
             onChange={handleInputChange}
-            className="box-border flex items-center px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid bg-transparent text-neutral-400 max-sm:p-3 max-sm:text-sm"
+            className="box-border flex items-center px-3 sm:px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid bg-transparent text-neutral-400 max-sm:p-2 max-sm:text-sm"
           />
         </div>
 
@@ -62,7 +62,7 @@ export default function ContactForm() {
             placeholder="Your email address"
             value={formData.email}
             onChange={handleInputChange}
-            className="box-border flex items-center px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid bg-transparent text-neutral-400 max-sm:p-3 max-sm:text-sm"
+            className="box-border flex items-center px-3 sm:px-4 pt-2.5 pb-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid bg-transparent text-neutral-400 max-sm:p-2 max-sm:text-sm"
           />
         </div>
 
@@ -76,13 +76,13 @@ export default function ContactForm() {
             placeholder="Write your message here..."
             value={formData.message}
             onChange={handleInputChange}
-            className="box-border flex items-start px-4 py-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid resize-none bg-transparent h-[143px] text-neutral-400 max-sm:p-3 max-sm:text-sm"
+            className="box-border flex items-start px-3 sm:px-4 py-2.5 w-full text-base leading-5 rounded-md border-2 border-[#1750BF] border-solid resize-none bg-transparent h-[120px] sm:h-[143px] text-neutral-400 max-sm:p-2 max-sm:text-sm"
           />
         </div>
 
         <button
           type="submit"
-          className="flex flex-row justify-center items-center px-[44px] py-[12px] w-[135px] h-[48px] bg-gradient-to-r from-[#72A0FF] via-[#246CFF] to-[#0054FF] rounded-[37px] text-[16px]"
+          className="flex flex-row justify-center items-center px-8 py-3 w-full sm:w-[135px] h-[48px] bg-gradient-to-r from-[#72A0FF] via-[#246CFF] to-[#0054FF] rounded-[37px] text-[16px] mt-2"
         >
           <span className="text-base leading-6 text-white tracking-[2px] max-sm:text-sm">
             SEND
@@ -90,7 +90,7 @@ export default function ContactForm() {
         </button>
       </form>
 
-      <p className="w-full text-lg text-neutral-200  max-sm:text-base">
+      <p className="w-full text-base sm:text-lg text-neutral-200 max-sm:text-base mt-2">
         We look forward to helping you grow and achieve your tech career
         goals!
       </p>

@@ -6,7 +6,7 @@ import Footer from '../Footer';
 
 export default function ContactInfo() {
   return (
-    <section className="flex flex-col  gap-4 justify-between items-start left-[section]  max-md:items-center px-6  w-6/12">
+    <section className="flex flex-col gap-4 justify-between items-start px-2 sm:px-4 md:px-6 w-full md:w-11/12 lg:w-8/12 max-md:items-center">
       <header className="flex flex-col gap-4 items-start w-full">
         <div className='w-fit'>
         <h1 className="text-[40px] font-bold leading-10 text-blue-600  max-md:text-3xl max-md:leading-8 max-sm:text-3xl max-sm:leading-7">
@@ -44,7 +44,7 @@ export default function ContactInfo() {
       </section>
 
       {/* We're here part below How to contact us */}
-      <div className="w-full pr-8 text-neutral-400 my-0 max-sm:text-xs text-[13px] leading-[18px] ">
+      <div className="w-full pr-0 md:pr-8 text-neutral-400 my-0 text-[13px] leading-[18px] max-sm:text-xs ">
         We're here to help you on your journey to tech excellence! Whether you have questions about our courses, need help with enrollment, want more information on mentorship or internships, or simply wish to connect with our team, we'd love to hear from you.
       </div>
 
@@ -52,7 +52,7 @@ export default function ContactInfo() {
         <h3 className="text-sm font-bold leading-4 text-white">
           Why Contact Us?
         </h3>
-        <ul className=" list-disc ml-2 text-sm  max-sm:text-sm text-gray-300">
+        <ul className="list-disc ml-2 text-sm text-gray-300 max-sm:text-xs">
           <li className="ml-5">Get details about our courses, curriculum, and pricing</li>
           <li className="ml-5">Inquire about live mentorship, certification, and internships</li>
           <li className="ml-5">Resolve issues related to payment, refunds, or access</li>
