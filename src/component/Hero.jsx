@@ -57,25 +57,25 @@ const EdubrainingHero = () => {
 
 
 
-      <div className="relative z-10 container mx-auto px-6 py-12">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12">
 
         
 
-        <div className="flex gap-12 items-center min-h-screen w-full">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center min-h-screen w-full">
           {/* Left Content */}
-          <div className="space-y-8 w-7/12 lg:pr-8 ml-8">
+          <div className="space-y-8 w-full lg:w-7/12 lg:pr-8 lg:ml-8">
             <div className="space-y-1 w-full">
-              <h1 className="text-4xl text-nowrap w-full lg:text-7xl font-bold leading-tight ">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight w-full break-words">
                 Discover the future
                 <br />
                 of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#1545C2] to-[#859EE1] to-white ">learning</span>
               </h1>
 
-              <p className="text-3xl text-[#6C98FF] leading-relaxed">
+              <p className="text-xl sm:text-2xl md:text-3xl text-[#6C98FF] leading-relaxed">
                 <span className="text-[#6C98FF] font-semibold font-roboto ">AI Enhance courses for high paying job</span>
               </p>
 
-              <div className="text-white leading-relaxed font-roboto text-xl ">
+              <div className="text-white leading-relaxed font-roboto text-base sm:text-lg md:text-xl ">
                 <p className="mb-2 mt-7">
                   <span className="text-white font-bold font-roboto">Edubraining</span> is your gateway to a high-growth tech career. Founded by
                 </p>
@@ -93,11 +93,11 @@ const EdubrainingHero = () => {
             </div>
 
             <button
-  onClick={addToCart}
-  className="mt-0 bg-white text-black w-[193px] h-[40px] rounded-full font-semibold text-lg px-6 py-6 whitespace-nowrap cursor-pointer flex justify-center items-center"
->
-  Explore Courses
-</button>
+              onClick={addToCart}
+              className="mt-2 bg-white text-black w-full sm:w-[193px] h-[40px] rounded-full font-semibold text-base sm:text-lg px-4 sm:px-6 py-3 whitespace-nowrap cursor-pointer flex justify-center items-center"
+            >
+              Explore Courses
+            </button>
 
 
 
@@ -111,35 +111,35 @@ const EdubrainingHero = () => {
           </div>
 
           {/* Right Content - Visual Elements */}
-          <div className="w-5/12 px-4 sm:px-8 lg:px-16 py-0">
+          <div className="w-full lg:w-5/12 px-0 sm:px-4 lg:px-8 py-0 flex flex-col items-center">
   {/* Background Image Section */}
-  <div className="relative w-full h-full sm:h-90 lg:h-120 lg:w-132 right-20 ">
-    <img
-      src="header.png"
-      alt="Background Visual"
-      className="w-full h-full "
-    />
-  </div>
+            <div className="relative w-full h-60 sm:h-80 md:h-96 lg:h-[420px] xl:h-[480px] lg:w-[420px] xl:w-[480px] mx-auto">
+              <img
+                src="header.png"
+                alt="Background Visual"
+                className="w-full h-full object-cover rounded-xl"
+              />
+            </div>
 
   {/* Cart Widget - Below the Image */}
-  <div className="mt-60 flex justify-end">
-    <div className="bg-[slate-800/90] backdrop-blur-sm border border-[#1750BF] rounded-xl p-3 sm:p-4 shadow-2xl w-fit">
-      <div className="flex items-center justify-between gap-4 sm:gap-6 lg:gap-8 min-w-36 sm:min-w-48">
-        <div className="flex flex-col items-center">
-          <div className="text-lg sm:text-2xl font-bold text-white">0</div>
-          <div className="text-xs sm:text-sm text-gray-400">Courses</div>
-        </div>
-      <div className="flex flex-col items-center bg-[#1545C20D]">
-          <div className="text-lg sm:text-2xl font-bold text-white">₹0</div>
-          <div className="text-xs sm:text-sm text-gray-400">Total</div>
-        </div>
-        <button className="bg-gradient-to-r from-[#72A0FF] via-[#246CFF] to-[#0054FF] text-white px-3 py-2 sm:px-4 sm:py-2 rounded-lg flex items-center gap-1 sm:gap-2 transition-colors duration-200">
-          <ShoppingCart className="w-3 h-3 sm:w-4 sm:h-4" />
-          <span className="text-xs sm:text-sm">Go to Cart</span>
-        </button>
-      </div>
-    </div>
-  </div>
+            <div className="mt-8 flex justify-center w-full">
+              <div className="bg-[slate-800/90] backdrop-blur-sm border border-[#1750BF] rounded-xl p-2 sm:p-4 shadow-2xl w-full max-w-xs">
+                <div className="flex items-center justify-between gap-2 sm:gap-4 lg:gap-8 min-w-0">
+                  <div className="flex flex-col items-center">
+                    <div className="text-base sm:text-lg md:text-2xl font-bold text-white">0</div>
+                    <div className="text-xs sm:text-sm text-gray-400">Courses</div>
+                  </div>
+                  <div className="flex flex-col items-center bg-[#1545C20D]">
+                    <div className="text-base sm:text-lg md:text-2xl font-bold text-white">0</div>
+                    <div className="text-xs sm:text-sm text-gray-400">Total</div>
+                  </div>
+                  <button className="bg-gradient-to-r from-[#72A0FF] via-[#246CFF] to-[#0054FF] text-white px-2 py-2 sm:px-4 sm:py-2 rounded-lg flex items-center gap-1 sm:gap-2 transition-colors duration-200">
+                    <ShoppingCart className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <span className="text-xs sm:text-sm">Go to Cart</span>
+                  </button>
+                </div>
+              </div>
+            </div>
 </div>
 
 
