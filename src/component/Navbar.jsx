@@ -16,7 +16,7 @@ const Navbar = ({ onLoginClick }) => {
 
   const navItems = [
     { name: "About Us", to: "/#about" },
-    { name: "Courses", to: "/#courses" },
+    { name: "Courses", to: "/courses" },
     { name: "Process", to: "/#process" },
     { name: "Certification", to: "/#certification" },
     { name: "FAQ", to: "/#faq" },
