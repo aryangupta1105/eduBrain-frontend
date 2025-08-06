@@ -45,7 +45,7 @@ const LearningExperienceSection = () => {
   return (
     <div className="w-full py-10 sm:py-16 px-2 sm:px-6 relative bg-[#0C0C0D]">
         <Hr/>
-      <div className="mx-auto px-2 sm:px-6 max-w-5xl">
+      <div className="mx-auto px-2 py-10 sm:px-6 max-w-5xl">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-5xl font-semibold font-Inter text-white">
             Learning Experience at a Glance

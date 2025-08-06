@@ -57,7 +57,7 @@ const EdubrainingHero = () => {
 
 
 
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 py-6 md:py-8 lg:py-12">
 
         
 
@@ -122,8 +122,8 @@ const EdubrainingHero = () => {
             </div>
 
   {/* Cart Widget - Below the Image */}
-            <div className="mt-8 flex justify-center w-full">
-              <div className="bg-[slate-800/90] backdrop-blur-sm border border-[#1750BF] rounded-xl p-2 sm:p-4 shadow-2xl w-full max-w-xs">
+            <div className="mt-8 flex justify-center w-full px-2 md:px-0">
+              <div className="bg-[slate-800/90] backdrop-blur-sm border border-[#1750BF] rounded-xl p-2 sm:p-4 shadow-2xl w-full max-w-[320px] md:max-w-xs mx-auto">
                 <div className="flex items-center justify-between gap-2 sm:gap-4 lg:gap-8 min-w-0">
                   <div className="flex flex-col items-center">
                     <div className="text-base sm:text-lg md:text-2xl font-bold text-white">0</div>
