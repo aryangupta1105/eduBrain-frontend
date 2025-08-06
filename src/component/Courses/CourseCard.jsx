@@ -34,7 +34,7 @@ function fixSvgAttributes(svgString) {
           </div>
         )}
         <div className="flex gap-3 items-center max-sm:gap-2">
-          <img src="../../../public/powerbi.png" alt="Course" className=" object-contain rounded" />
+          <img src="/powerbi.png" alt="Course" className=" object-contain rounded" />
         </div>
       </header>
 
