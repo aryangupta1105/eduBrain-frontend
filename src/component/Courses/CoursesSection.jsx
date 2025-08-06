@@ -19,7 +19,7 @@ export const CoursesSection = () => {
   };
 
   return (
-    <section className="overflow-x-hidden relative w-full -mt-10 min-h-screen bg-neutral-950">
+    <section className="overflow-x-hidden relative w-full -mt-10 min-h-screen bg-neutral-950 pb-32">
       <DecorativeVectors />
 
       <div className="flex flex-col gap-8 sm:gap-10 items-center px-2 sm:px-5 py-0 mx-auto mt-16 sm:mt-24 mb-0 w-full max-w-[1105px]">
