@@ -17,6 +17,7 @@ import CertificationAchievement from "./component/Helps";
 import SuccessPathInfographic from "./component/process";
 import TechCoursesSection from "./component/Tech";
 import CoursesSection from "./component/Courses/CoursesSection";
+import CoursePage from "./component/Course Page/CoursePage";
 import EdubrainingWelcomeSection from "./component/Welcome";
 import ForgetOTP from "./component/Forgetotp";
 import Reset from "./component/Resetpass";
@@ -72,6 +73,11 @@ export default function App() {
               }
             />
             <Route path="/courses" element={<CoursesSection />} />
+            <Route path="/course-details" element={
+             
+                <CoursePage />
+                
+            } />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
 
