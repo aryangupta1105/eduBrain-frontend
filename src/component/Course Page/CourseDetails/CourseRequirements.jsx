@@ -9,22 +9,14 @@ function CourseRequirements() {
         </h2>
       </header>
       <div className="flex gap-2 items-center mt-5 w-full text-xl leading-8 text-zinc-400 max-md:max-w-full">
-        <div className="flex-1 shrink self-stretch my-auto basis-0 text-zinc-400 max-md:max-w-full">
-          No prior experience in data analysis or Power BI is needed
-          <br />
-          Basic computer skills and internet access
-          <br />
-          Willingness to learn and apply data-driven insights to real-world
-          problems
-          <br />
-          Curiosity and consistency — that's all you really need!
-          <br />
-          Stable internet connection for accessing course materials and
-          Power BI Service
-          <br />
-          Basic familiarity with Excel or spreadsheets (helpful but not
-          required)
-        </div>
+          <ul className="list-disc pl-6 flex-1 shrink self-stretch my-auto basis-0 text-zinc-400 max-md:max-w-full" style={{ listStyleType: 'disc' }}>
+            <li style={{ fontSize: '0.95em', paddingLeft: '0.1em',  listStylePosition: 'outside' }}>No prior experience in data analysis or Power BI is needed</li>
+            <li style={{ fontSize: '0.95em', paddingLeft: '0.1em', listStylePosition: 'outside' }}>Basic computer skills and internet access</li>
+            <li style={{ fontSize: '0.95em', paddingLeft: '0.1em', listStylePosition: 'outside' }}>Willingness to learn and apply data-driven insights to real-world problems</li>
+            <li style={{ fontSize: '0.95em', paddingLeft: '0.1em', listStylePosition: 'outside' }}>Curiosity and consistency — that's all you really need!</li>
+            <li style={{ fontSize: '0.95em', paddingLeft: '0.1em', listStylePosition: 'outside' }}>Stable internet connection for accessing course materials and Power BI Service</li>
+            <li style={{ fontSize: '0.95em', paddingLeft: '0.1em', listStylePosition: 'outside' }}>Basic familiarity with Excel or spreadsheets (helpful but not required)</li>
+        </ul>
       </div>
     </section>
   );

@@ -31,10 +31,10 @@ function KeyFeatures() {
           Key features
         </h2>
       </header>
-      <div className="flex flex-col justify-center items-center py-16 pr-20 pl-20 mt-9 w-full whitespace-nowrap rounded-lg border border-solid shadow-sm bg-blend-normal bg-neutral-950 border-zinc-800 max-md:px-5">
+      <div className="flex flex-col justify-center items-center py-16 pr-20 pl-20 mt-9 w-full whitespace-nowrap rounded-lg border border-solid shadow-sm bg-blend-normal bg-[#0C0C0D] border-zinc-800 max-md:px-5">
         <div className="flex flex-wrap gap-9 items-center w-full max-w-[247px]">
           {features.map((feature, index) => (
-            <div key={index} className="flex grow shrink gap-4 items-center self-stretch px-8 py-10 my-auto rounded-3xl border border-solid bg-blend-normal bg-neutral-900 bg-opacity-0 border-zinc-800 min-h-[141px] min-w-60 w-[200px] max-md:px-5">
+            <div key={index} className="flex grow shrink gap-4 items-center self-stretch px-8 py-10 my-auto rounded-3xl border border-solid bg-blend-normal  bg-opacity-0 border-zinc-800 min-h-[141px] min-w-60 w-[200px] max-md:px-5">
               <img
                 src={feature.icon}
                 className="object-contain shrink-0 self-stretch my-auto aspect-square w-[50px]"
