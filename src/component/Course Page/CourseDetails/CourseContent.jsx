@@ -66,57 +66,46 @@ function CourseContent() {
 		setOpenIndex(openIndex === idx ? null : idx);
 	};
 
-	return (
-		<section className="p-8 mt-10 w-full rounded-lg border border-solid border-zinc-800 max-md:px-5 max-md:max-w-full">
-			<header>
-				<h2 className="text-3xl font-semibold leading-none text-blue-600">
-					Course content
-				</h2>
-			</header>
-			<div className="flex flex-col items-start mt-5 w-full text-xl leading-snug text-zinc-400 max-md:max-w-full">
-				{contentItems.map((item, index) => (
-					<div key={index} className="w-full">
-						<button
-							onClick={() => handleToggle(index)}
-							className="flex justify-between items-center w-full py-3 px-2 rounded-lg transition-colors focus:outline-none"
-							aria-expanded={openIndex === index}
-							aria-controls={`content-${index}`}
-						>
-							<div className="flex items-center gap-2.5">
-								<img
-									src="https://api.builder.io/api/v1/image/assets/92dbd61d4c7248e0a6300c516c4d3fc9/d582b0953e4886ffba2ffd8bad3aa9a089950569?placeholderIfAbsent=true"
-									className="object-contain shrink-0 w-5 aspect-square"
-									alt=""
-								/>
-								<span className="text-zinc-100 font-medium">
-									{item.title}
-								</span>
-							</div>
-							<svg
-								className={`w-5 h-5 text-zinc-400 transform transition-transform duration-200 ${
-									openIndex === index ? "rotate-90" : ""
-								}`}
-								fill="none"
-								stroke="currentColor"
-								strokeWidth={2}
-								viewBox="0 0 24 24"
+		return (
+			<section className="p-8 mt-10 w-full rounded-lg border border-solid border-zinc-800 max-md:px-5 max-md:max-w-full">
+				<header>
+					<h2 className="text-3xl font-semibold leading-none text-blue-600">
+						Course content
+					</h2>
+				</header>
+				<div className="flex flex-col items-start mt-5 w-full text-lg leading-snug text-zinc-400 max-md:max-w-full">
+					{contentItems.map((item, index) => (
+						<div key={index} className="w-full mb-2">
+							<button
+								onClick={() => handleToggle(index)}
+								className="flex items-center w-full py-1 px-2 rounded-lg transition-colors cursor-pointer focus:outline-none text-zinc-400"
+								aria-expanded={openIndex === index}
+								aria-controls={`content-${index}`}
 							>
-								<path d="M9 5l7 7-7 7" />
-							</svg>
-						</button>
-						{openIndex === index && (
-							<div
-								id={`content-${index}`}
-								className="pl-12 pr-4 pb-4 text-base text-dull animate-fade-in"
-							>
-								{item.content}
-							</div>
-						)}
-					</div>
-				))}
-			</div>
-		</section>
-	);
+								<div className="flex items-center gap-2.5">
+									<img
+										src="https://api.builder.io/api/v1/image/assets/92dbd61d4c7248e0a6300c516c4d3fc9/d582b0953e4886ffba2ffd8bad3aa9a089950569?placeholderIfAbsent=true"
+										className="object-contain shrink-0 w-5 aspect-square"
+										alt=""
+									/>
+									<span className="font-medium">
+										{item.title}
+									</span>
+								</div>
+							</button>
+							{openIndex === index && (
+								<div
+									id={`content-${index}`}
+									className="pl-12 pr-4 pb-4 text-base text-zinc-400 animate-fade-in"
+								>
+									{item.content}
+								</div>
+							)}
+						</div>
+					))}
+				</div>
+			</section>
+		);
 }
 
 export default CourseContent;

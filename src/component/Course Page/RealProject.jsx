@@ -52,7 +52,7 @@ const RealProject = () => {
       "
     >
       {/* Decorative SVG */}
-      <div className="absolute top-0 left-0 w-[340px] h-[187px] opacity-60 pointer-events-none z-0 hidden md:block">
+      <div className="absolute top-0 left-0 w-[340px] h-[187px] opacity-60 pointer-events-none z-0 hidden md:block ">
         <svg width="339" height="186" viewBox="0 0 339 186" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 75.0846H56.1481L95.974 37.2163H193.907L231.121 1.30664H320.566M0 94.6716H63.9827L103.156 55.4975H211.535L236.997 30.0343H338.847M0 116.217H63.9827L99.8913 79.6549H236.997M320.566 135.152H143.635L118.825 160.615H285.311M223.939 116.217H126.007L79.6519 160.615H33.2971M33.2971 141.028H70.5115L113.602 94.6716H274.212M0 135.152H22.1981V174.326H249.402M0 149.515H10.4462V185.425H138.412" stroke="url(#paint0_linear_2021_937)" strokeOpacity="0.2"/>
           <defs>
@@ -81,20 +81,20 @@ const RealProject = () => {
             At Edubraining, we go beyond just courses — we create career-ready professionals. Whether you’re diving into Web Development, mastering Java & C++, exploring UI/UX Design, or gearing up for a role in Software Engineering, our platform empowers you with hands-on projects, expert guidance, and real-world learning.
           </p>
           <p
-            className="font-montserrat text-[18px] leading-[25px] font-medium text-gray-400 w-[1184px] max-w-full"
+            className="font-montserrat text-[18px] leading-[25px] font-medium text-gray-400 w-[1184px]  max-w-full"
           >
             With our unique approach, you’ll develop a strong portfolio, work on industry-level challenges, and step confidently into internships and high-growth tech careers.
           </p>
         </div>
         </header>
 
-        <section className="flex flex-col lg:flex-row items-center gap-10 w-full">
+        <section className="flex flex-col lg:flex-row items-center gap-10 w-full mx-auto ml-5">
           {/* Main Image */}
-          <div className="relative w-full max-w-[608px] h-[608px] bg-cover bg-center rounded-xl overflow-hidden flex-shrink-0 mx-auto">
+          <div className="relative w-full max-w-[608px] h-[658px]  bg-cover bg-center rounded-xl overflow-hidden flex-shrink-0 mx-auto">
             <img
               src="/consultation.png"
               alt="Learning environment"
-              className="w-full h-full object-cover rounded-xl"
+              className="w-full h-full object-contain rounded-xl"
             />
             <img
               src="/consultation.png"
@@ -104,15 +104,15 @@ const RealProject = () => {
           </div>
 
           {/* Benefits */}
-          <aside className="flex flex-col w-full max-w-xl items-start gap-8">
+          <aside className="flex flex-col w-full max-w-xl items-start gap-8 px-5">
             <h2 className="text-white text-2xl sm:text-3xl font-bold mb-2">
               Top Benefits
             </h2>
-            <div className="flex flex-col gap-6 w-full">
+            <div className="flex flex-col gap-6 w-full mx-auto leading-5">
               {benefitsData.map((benefit) => (
                 <article
                   key={benefit.id}
-                  className="flex items-center gap-4 px-5 py-4 bg-[#121721] rounded-xl border border-[#0554f7] w-full"
+                  className="flex items-center gap-4 px-5 py-4 bg-[#121721] rounded-xl border border-[#0554f7] w-[80%]"
                 >
                   <img
                     className="w-10 h-10 object-contain"
@@ -123,7 +123,7 @@ const RealProject = () => {
                     <h3 className="text-lg font-semibold text-white mb-1">
                       {benefit.title}
                     </h3>
-                    <p className="text-base text-[#abaeb2]">
+                    <p className="text-base text-[#abaeb2] leading-5">
                       {benefit.description}
                     </p>
                   </div>
