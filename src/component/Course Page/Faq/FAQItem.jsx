@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 
-const FAQItem = ({ question }) => {
+const FAQItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleOpen = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prev) => !prev);
   };
 
   return (
-    <button
-      className="flex justify-center items-center px-7 pt-3.5 pb-6 w-full rounded-xl border-2 border-solid transition-all cursor-pointer bg-neutral-950 border-neutral-800 duration-[0.2s] ease-[ease] max-md:px-5 max-md:py-4 max-sm:px-4 max-sm:pt-3.5 max-sm:pb-5 hover:border-neutral-700"
+    <div
+      className={`w-full rounded-xl border-2 border-solid transition-all duration-200 cursor-pointer mb-2 ${isOpen ? 'shadow-lg' : ''}`}
+      style={{
+        borderColor: '#1545C2',
+        background: isOpen ? 'rgba(21,69,194,0.10)' : 'rgba(21,69,194,0.05)',
+      }}
       onClick={toggleOpen}
       aria-expanded={isOpen}
+      tabIndex={0}
+      role="button"
     >
-      <div className="flex gap-5 justify-between items-center w-full max-sm:gap-3">
+      <div className="flex gap-5 justify-between items-center w-full px-7 pt-3.5 pb-3 max-md:px-5 max-sm:px-4 max-sm:pt-3.5">
         <span className="flex-1 text-xl leading-7 text-slate-50 max-md:text-lg max-md:leading-6 max-sm:text-base max-sm:leading-6 text-left">
           {question}
         </span>
@@ -28,21 +34,21 @@ const FAQItem = ({ question }) => {
           >
             <path
               d="M8 12H16"
-              stroke="#ABAEB3"
+              stroke="#1545C2"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M12 16.0005V8.00049"
-              stroke="#ABAEB3"
+              stroke="#1545C2"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
               d="M9.00001 22H15C20 22 22 20 22 15V8.99998C22 4 20 2 15 2H9.00001C4 2 2 4 2 8.99998V15C2 20 4 22 9.00001 22Z"
-              stroke="#ABAEB3"
+              stroke="#1545C2"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -50,7 +56,13 @@ const FAQItem = ({ question }) => {
           </svg>
         </div>
       </div>
-    </button>
+      {/* Answer section */}
+      {isOpen && (
+        <div className="px-7 pb-6 pt-1 text-base text-slate-200 max-md:px-5 max-sm:px-4 max-sm:pb-5 max-sm:text-sm transition-all duration-200">
+          {answer}
+        </div>
+      )}
+    </div>
   );
 };
 

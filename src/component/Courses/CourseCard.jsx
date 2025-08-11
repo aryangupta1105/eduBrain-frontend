@@ -59,9 +59,9 @@ function fixSvgAttributes(svgString) {
           <span className="text-md line-through text-zinc-400">{originalPrice}</span>
         </div>
 
-        <button className="p-3 w-full text-base font-semibold rounded-lg cursor-pointer bg-slate-50 border-[none] text-neutral-950">
+        <a href="/course-details" className="p-3 w-full text-base font-semibold rounded-lg cursor-pointer bg-slate-50 border-[none] text-neutral-950">
           View Course
-        </button>
+        </a>
       </div>
     </article>
   );

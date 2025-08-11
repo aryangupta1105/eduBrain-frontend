@@ -2,19 +2,55 @@ import React from 'react';
 import BackgroundSVG from './BackgroundSVG';
 import FAQItem from './FAQItem';
 
-const faqQuestions = [
-  "What is Edubraining?",
-  "What types of courses do you offer?",
-  "How are the courses structured?",
-  "What is included in the live mentorship sessions?",
-  "Do I receive a certificate after completing a course?",
-  "How long do I have access to the course materials?",
-  "Do you offer internships?",
-  "What kind of placement assistance do you provide?",
-  "How do I contact Edubraining?",
-  "Refund Policy.",
-  "Exchange Policy.",
-  "Point to be noted while Refunding."
+const faqData = [
+  {
+    question: "What is Edubraining?",
+    answer: "Edubraining is an online platform offering a variety of tech courses, live mentorship, and career support to help you upskill and land your dream job.",
+  },
+  {
+    question: "What types of courses do you offer?",
+    answer: "We offer courses in web development, data science, machine learning, cloud computing, and more, designed for both beginners and advanced learners.",
+  },
+  {
+    question: "How are the courses structured?",
+    answer: "Courses include video lectures, hands-on projects, quizzes, and live mentorship sessions to ensure a comprehensive learning experience.",
+  },
+  {
+    question: "What is included in the live mentorship sessions?",
+    answer: "Live mentorship sessions provide direct interaction with industry experts, personalized guidance, and doubt resolution.",
+  },
+  {
+    question: "Do I receive a certificate after completing a course?",
+    answer: "Yes, you will receive a certificate of completion for each course you successfully finish.",
+  },
+  {
+    question: "How long do I have access to the course materials?",
+    answer: "You have lifetime access to all course materials after enrollment.",
+  },
+  {
+    question: "Do you offer internships?",
+    answer: "Yes, we offer internship opportunities to top-performing students based on their course performance.",
+  },
+  {
+    question: "What kind of placement assistance do you provide?",
+    answer: "We provide resume reviews, mock interviews, and job referrals to help you secure your desired role.",
+  },
+  {
+    question: "How do I contact Edubraining?",
+    answer: "You can contact us via our website's contact form or email us at support@edubraining.com.",
+  },
+  {
+    question: "Refund Policy.",
+    answer: "We offer a 7-day refund policy from the date of enrollment. Please refer to our website for detailed terms.",
+  },
+  {
+    question: "Exchange Policy.",
+    answer: "Courses can be exchanged within 7 days of purchase, provided you have not accessed more than 20% of the content.",
+  },
+  {
+    question: "Point to be noted while Refunding.",
+    answer: "Refunds are processed within 5-7 business days. Please ensure your bank details are correct to avoid delays.",
+  },
 ];
 
 const FAQSection = () => {
@@ -37,8 +73,8 @@ const FAQSection = () => {
       </header>
 
       <div className="flex relative flex-col gap-3 items-start w-full max-w-screen-md z-[2] max-md:max-w-full">
-        {faqQuestions.map((question, index) => (
-          <FAQItem key={index} question={question} />
+        {faqData.map((item, index) => (
+          <FAQItem key={index} question={item.question} answer={item.answer} />
         ))}
       </div>
     </section>

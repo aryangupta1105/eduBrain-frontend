@@ -4,7 +4,7 @@ import PaginationDots from './PaginationDots';
 function TestimonialCard({ testimonial }) {
   return (
     <div
-      className="flex flex-col justify-between items-center box-border p-[15.2007px_16.2865px] gap-[9.77px] min-w-[343.1px] min-h-[456.02px] bg-[rgba(21,69,194,0.05)] rounded-[17.3722px] border border-[#1545C2]"
+      className="flex flex-col justify-between items-center box-border p-[15.2007px_16.2865px] gap-[9.77px] min-w-[353.1px] min-h-[506.02px] bg-[rgba(21,69,194,0.05)] rounded-[17.3722px] border border-[#1545C2]"
       style={{ mixBlendMode: 'normal', flex: 'none', order: 0, flexGrow: 0 }}
     >
       {/* Image Container */}
@@ -14,29 +14,29 @@ function TestimonialCard({ testimonial }) {
         <img
           src={testimonial.image}
           alt={testimonial.title}
-          className="min-w-[307.95px] min-h-[256.46px] object-cover"
+          className="max-w-[307.95px] min-h-[256.46px] object-cover"
         />
       </div>
 
       {/* Content */}
       <div
-        className="flex flex-col items-center gap-3 lg:gap-4 text-center flex-1 w-[308.36px] h-[145.07px] overflow-hidden break-words"
+        className="flex flex-col items-center gap-3 lg:gap-4 text-center flex-1 justify-between w-[308.36px] h-[145.07px] overflow-hidden break-words"
       >
         <div className="flex flex-col items-center gap-1">
           <h3
-            className="font-montserrat text-md font-bold leading-tight text-[#A0AEC0]"
+            className="font-montserrat text-lg font-bold leading-tight text-white"
           >
             {testimonial.title}
           </h3>
           <p
-            className="font-montserrat text-md font-bold leading-5 text-[#0356FF]"
+            className="font-montserrat text-md leading-5 text-[#0356FF]"
           >
             {testimonial.role}
           </p>
         </div>
 
         <p
-          className="font-montserrat text-md font-normal leading-relaxed text-justify text-[#A0AEC0]"
+          className="font-montserrat text-sm font-normal leading-5 text-justify text-[#A0AEC0]"
         >
           "{testimonial.quote}"
         </p>
@@ -51,8 +51,9 @@ function TestimonialCard({ testimonial }) {
   );
 }
 
+
 export default function SuccessStories() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [startIndex, setStartIndex] = useState(0);
 
   const testimonials = [
     {
@@ -75,16 +76,52 @@ export default function SuccessStories() {
       title: "Transformative Design Thinking",
       role: "UI/UX & Angular Enthusiast",
       quote: "Their UI/UX and Angular programs taught me to combine creativity with coding skills. The hands-on assignments transformed how I approach building user-centered digital products."
+    },
+    {
+      id: 4,
+      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      title: "Career-Ready in Months",
+      role: "Data Science Intern",
+      quote: "The internship program was intense but rewarding. I landed my first job thanks to the portfolio I built at Edubraining."
+    },
+    {
+      id: 5,
+      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      title: "Supportive Mentors",
+      role: "Web Development Learner",
+      quote: "Mentors were always available to help. The community and support made all the difference in my learning journey."
+    },
+    {
+      id: 6,
+      image: "https://randomuser.me/api/portraits/men/65.jpg",
+      title: "Hands-on Projects",
+      role: "AI & ML Student",
+      quote: "Building real projects gave me the confidence to apply for jobs. The curriculum is practical and up-to-date."
     }
   ];
 
+  const visibleCount = 3;
+  const total = testimonials.length;
+
+  // Get the visible testimonials, wrapping around if needed
+  const getVisibleTestimonials = () => {
+    let visible = [];
+    for (let i = 0; i < visibleCount; i++) {
+      visible.push(testimonials[(startIndex + i) % total]);
+    }
+    return visible;
+  };
+
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % testimonials.length);
+    setStartIndex((prev) => (prev + 1) % total);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setStartIndex((prev) => (prev - 1 + total) % total);
   };
+
+  // For pagination dots: one dot per possible window
+  const numDots = total;
 
   return (
     <div className="min-h-screen relative bg-edubraining-dark overflow-hidden" style={{ backgroundColor: '#0c0c0d' }}>
@@ -122,41 +159,39 @@ export default function SuccessStories() {
 
             {/* Testimonials Grid - Desktop */}
             <div className="hidden lg:flex items-center gap-8 xl:gap-12">
-              {testimonials.map((testimonial, index) => (
+              {getVisibleTestimonials().map((testimonial) => (
                 <TestimonialCard key={testimonial.id} testimonial={testimonial} />
               ))}
             </div>
 
             {/* Testimonials Carousel - Mobile/Tablet */}
             <div className="lg:hidden w-full max-w-sm">
-              <TestimonialCard testimonial={testimonials[currentSlide]} />
+              <TestimonialCard testimonial={getVisibleTestimonials()[0]} />
             </div>
           </div>
 
           {/* Pagination Dots */}
           <PaginationDots
-            totalPages={testimonials.length}
-            currentPage={currentSlide}
-            onPageChange={setCurrentSlide}
+            totalPages={numDots}
+            currentPage={startIndex}
+            onPageChange={setStartIndex}
           />
         </div>
 
-        {/* Navigation Arrows */}
-        
-
+        {/* Navigation Arrows - Desktop only, vertically centered */}
         <button
-          onClick={nextSlide}
-          className="absolute z-10 flex items-center justify-center text-white border-2 border-white rounded-full shadow-md left-[31px] top-[585px] w-[74px] h-[74px]"
-          aria-label="Next testimonial"
+          onClick={prevSlide}
+          className="hidden lg:flex absolute z-10 items-center justify-center text-white border-2 border-white rounded-full shadow-md left-[31px] top-1/2 -translate-y-1/2 w-[74px] h-[74px]"
+          aria-label="Previous testimonial"
         >
-          <span className="font-montserrat flex items-center justify-center pb-3 text-4xl font-normal ">‹</span>
+          <span className="font-montserrat flex items-center justify-center pb-3 text-4xl font-normal">‹</span>
         </button>
         <button
           onClick={nextSlide}
-          className="absolute z-10 flex items-center justify-center text-white border-2 border-white rounded-full shadow-md right-[31px] top-[585px] w-[74px] h-[74px]"
+          className="hidden lg:flex absolute z-10 items-center justify-center text-white border-2 border-white rounded-full shadow-md right-[31px] top-1/2 -translate-y-1/2 w-[74px] h-[74px]"
           aria-label="Next testimonial"
         >
-          <span className="font-montserrat flex items-center justify-center pb-3 text-4xl font-normal ">›</span>
+          <span className="font-montserrat flex items-center justify-center pb-3 text-4xl font-normal">›</span>
         </button>
       </div>
     </div>

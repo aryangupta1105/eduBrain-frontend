@@ -44,7 +44,7 @@ const RealProject = () => {
         bg-[#0C0C0D]
         rounded-none
         shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.1),0px_4px_6px_-1px_rgba(0,0,0,0.1)]
-        w-[1424px] max-w-full
+        w-full max-w-[1424px]
         min-h-[1129px]
         z-[3]
         mx-auto

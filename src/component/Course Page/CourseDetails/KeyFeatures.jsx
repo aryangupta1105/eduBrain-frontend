@@ -27,7 +27,7 @@ function KeyFeatures() {
   return (
     <section className="mt-32 w-full max-md:mt-10">
       <header>
-        <h2 className="text-3xl font-semibold leading-none text-white">
+        <h2 className="text-3xl text-blue-600 font-semibold leading-none ">
           Key features
         </h2>
       </header>

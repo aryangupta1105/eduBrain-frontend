@@ -21,7 +21,7 @@ export const CourseHero= () => {
 
       {/* Hero Section */}
       <section className="flex flex-col gap-9 items-center px-5 py-20">
-        <h1 className="text-6xl text-center text-white leading-[80px] max-w-[824px] max-md:text-5xl max-md:leading-[55px] max-sm:text-3xl max-sm:leading-10 font-bold">
+        <h1 className="text-6xl text-center text-white leading-[80px] max-w-[824px] max-md:text-5xl max-md:leading-[55px] max-sm:text-3xl max-sm:leading-10 font-semibold">
           Are you Ready to become Master in Power BI?
         </h1>
         <div className="flex flex-col gap-3.5 items-center">
@@ -53,13 +53,13 @@ export const CourseHero= () => {
         </div>
         <div className="flex flex-col w-fit gap-2 ">
           <div className="flex  gap-2  items-center px-3 py-1 rounded-xl bg-[#1545C233]
-bg-opacity-20">
+bg-opacity-20 w-fit">
             <p className="text-sm leading-5 text-white">
               <strong>No prior technical knowledge</strong> required to successfully engage with the course.
             </p>
           </div>
           <div className="flex gap-2 items-center px-3 py-1 rounded-xl bg-[#1545C233]
-bg-opacity-20">
+bg-opacity-20 w-fit">
             <p className="text-sm leading-5 text-white">
               All lectures are pre-recorded for <strong>flexible</strong>, <strong>self-paced learning</strong>.
             </p>
