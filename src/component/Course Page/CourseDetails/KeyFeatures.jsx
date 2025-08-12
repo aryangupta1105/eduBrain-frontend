@@ -25,26 +25,26 @@ function KeyFeatures() {
   ];
 
   return (
-    <section className="mt-32 w-full max-md:mt-10">
+  <section className="mt-10 sm:mt-16 md:mt-24 lg:mt-32 w-full">
       <header>
         <h2 className="text-3xl text-blue-600 font-semibold leading-none ">
           Key features
         </h2>
       </header>
-      <div className="flex flex-col justify-center items-center py-16 pr-20 pl-20 mt-9 w-full whitespace-nowrap rounded-lg border border-solid shadow-sm bg-blend-normal bg-[#0C0C0D] border-zinc-800 max-md:px-5">
-        <div className="flex flex-wrap gap-9 items-center w-full max-w-[247px]">
+  <div className="flex flex-col justify-center items-center py-6 sm:py-10 md:py-16 pr-4 sm:pr-10 md:pr-20 pl-4 sm:pl-10 md:pl-20 mt-6 sm:mt-9 w-full whitespace-nowrap rounded-lg border border-solid shadow-sm bg-blend-normal bg-[#0C0C0D] border-zinc-800 max-md:px-2">
+  <div className="flex flex-wrap gap-4 sm:gap-6 md:gap-9 items-center  w-full max-w-[247px] justify-center">
           {features.map((feature, index) => (
-            <div key={index} className="flex grow shrink gap-4 items-center self-stretch px-8 py-10 my-auto rounded-3xl border border-solid bg-blend-normal  bg-opacity-0 border-zinc-800 min-h-[141px] min-w-60 w-[200px] max-md:px-5">
+            <div key={index} className="flex grow shrink gap-2 sm:gap-4 items-center self-stretch justify-center px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-10 my-auto rounded-3xl border border-solid bg-blend-normal  bg-opacity-0 border-zinc-800 min-h-[90px] sm:min-h-[110px] md:min-h-[141px] min-w-40 sm:min-w-48 md:min-w-60 w-[120px] sm:w-[160px] md:w-[200px] max-md:px-3">
               <img
                 src={feature.icon}
-                className="object-contain shrink-0 self-stretch my-auto aspect-square w-[50px]"
+                className="object-contain shrink-0 self-stretch my-auto aspect-square w-8 sm:w-10 md:w-12"
                 alt=""
               />
-              <div className="self-stretch my-auto w-[114px]">
-                <div className={`${feature.value === "Lifetime" ? "text-3xl" : "text-4xl"} font-semibold leading-none text-white`}>
+              <div className="self-stretch my-auto w-[60px] sm:w-[80px] md:w-[114px]">
+                <div className={`${feature.value === "Lifetime" ? "text-lg sm:text-xl md:text-3xl" : "text-xl sm:text-2xl md:text-4xl"} font-semibold leading-none text-white`}>
                   {feature.value}
                 </div>
-                <div className="mt-4 text-2xl leading-none text-zinc-400">
+                <div className="mt-2 sm:mt-3 md:mt-4 text-base sm:text-lg md:text-2xl leading-none text-zinc-400">
                   {feature.label}
                 </div>
               </div>

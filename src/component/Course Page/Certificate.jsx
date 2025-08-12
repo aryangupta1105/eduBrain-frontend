@@ -25,9 +25,9 @@ export const Certificate = () => {
   ];
 
   return (
-    <div className="w-full mx-auto relative">
+  <div className="w-full mx-auto relative overflow-x-hidden">
       <svg
-          className="absolute w-[339px] h-[185px] left-0 top-10 z-10"
+          className="absolute left-0 top-10 z-10 w-[180px] h-[90px]  lg:w-[339px] lg:h-[185px]"
           width="339"
           height="186"
           viewBox="0 0 339 186"
@@ -56,7 +56,7 @@ export const Certificate = () => {
 
         {/* Right SVG - keep inside window, prevent overflow */}
         <svg
-          className="absolute w-[339px] h-[72px] right-0 top-[150px] z-10"
+          className="absolute right-0 top-[120px] lg:top-[150px] z-10 w-[120px] h-[40px] lg:w-[339px] lg:h-[72px]"
           width="339"
           height="72"
           viewBox="0 0 339 72"
@@ -82,54 +82,53 @@ export const Certificate = () => {
             </linearGradient>
           </defs>
         </svg>
-      <main className="relative w-full max-w-[1424.64px] mx-auto h-[922px] bg-[#0c0c0d] overflow-hidden">
-      <section className="relative h-[742px] top-[73px]">
+  <main className="relative w-full max-w-[1424.64px] mx-auto min-h-[600px] lg:h-[922px] bg-[#0c0c0d] overflow-visible px-2 lg:px-0">
+  <section className="relative min-h-[500px] lg:h-[742px] top-0 lg:top-[73px] flex flex-col justify-center z-20">
         {/* Left SVG - keep inside window */}
         
 
-        <div className="inline-flex flex-col items-center gap-[81.85px] absolute top-[33px] left-[108px]">
-          <header className="flex flex-col w-[822.57px] items-center gap-[8.18px] relative flex-[0_0_auto]">
-            <h1 className="relative w-fit mt-[-0.82px] ml-[-77.72px] mr-[-77.72px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-[#0356ff] text-5xl text-center tracking-[0] leading-[65.5px] whitespace-nowrap">
+  <div className="flex flex-col items-center gap-10 lg:gap-[81.85px] relative lg:absolute lg:top-[33px] lg:left-[108px] top-0 left-0 w-full px-2 lg:px-0 z-20">
+          <header className="flex flex-col w-full lg:w-[822.57px] items-center gap-2 lg:gap-[8.18px] relative flex-[0_0_auto]">
+            <h1 className="relative w-fit mt-0 lg:mt-[-0.82px] lg:ml-[-77.72px] lg:mr-[-77.72px] font-semibold text-[#0356ff] text-2xl lg:text-5xl text-center tracking-[0] leading-9 lg:leading-[65.5px] whitespace-normal">
               Earn an Industry-Recognized Certification
             </h1>
-            <p className="self-stretch [font-family:'Inter-Medium',Helvetica] font-medium  text-[#a5a8ad] text-center leading-[24.6px] relative text-[24.6px] tracking-[0]">
+            <p className="self-stretch font-medium text-[#a5a8ad] text-center leading-6 lg:leading-[24.6px] relative text-base lg:text-[24.6px] tracking-[0]">
               Validate your skills. Open doors to new opportunities.
             </p>
           </header>
 
-          <div className="inline-flex items-start gap-[45px] relative flex-[0_0_auto]">
+          <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-[45px] w-full justify-center">
             <img
-              className="relative w-[563.76px] h-[398.6px]"
+              className="w-full max-w-[563.76px] h-auto lg:h-[398.6px] object-contain"
               alt="Certificate of completion sample"
               src={"/certificate.png"}
             />
 
-            <div className="inline-flex flex-col items-start gap-[22.03px] relative flex-[0_0_auto]">
-              <p className="w-[600px] h-[63px] mt-[-1.60px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-white leading-[31.1px] relative text-[24.6px] tracking-[0]">
-                Validate your expertise with hands-on, real-world projects and
-                unlock new job opportunities.
+            <div className="flex flex-col items-start gap-4 lg:gap-[22.03px] w-full max-w-[600px]">
+              <p className="w-full lg:w-[600px] mt-0 lg:mt-[-1.60px] font-semibold text-white leading-6 lg:leading-[31.1px] text-base lg:text-[24.6px] tracking-[0]">
+                Validate your expertise with hands-on, real-world projects and unlock new job opportunities.
               </p>
 
-              <ul className="inline-flex flex-col items-start gap-[12.28px] relative flex-[0_0_auto]">
+              <ul className="flex flex-col items-start gap-2 lg:gap-[12.28px] w-full">
                 {features.map((feature, index) => (
                   <li
                     key={index}
-                    className="inline-flex flex-col items-start relative flex-[0_0_auto]"
+                    className="flex flex-col items-start w-full"
                   >
-                    <div className="inline-flex items-center justify-center gap-[8.02px] relative flex-[0_0_auto]">
+                    <div className="flex flex-row items-center gap-2 lg:gap-[8.02px] w-full">
                       <img
-                        className="relative w-[30.49px] h-[30.49px] aspect-[1] object-cover"
+                        className="w-[24px] lg:w-[30.49px] h-[24px] lg:h-[30.49px] aspect-[1] object-cover"
                         alt=""
                         src={feature.icon}
                         role="presentation"
                       />
 
-                      <h3 className="relative w-fit mt-[-1.60px] [font-family:'Roboto-SemiBold',Helvetica] font-semibold text-white text-[20.5px] tracking-[0] leading-[43.3px] whitespace-nowrap">
+                      <h3 className="font-semibold   text-white text-base lg:text-[20.5px] tracking-[0] leading-6 lg:leading-[43.3px] whitespace-normal">
                         {feature.title}
                       </h3>
                     </div>
 
-                    <p className="relative w-fit [font-family:'Roboto-Regular',Helvetica] font-normal  text-[#a5a8ad]  text-[20.5px] tracking-[0] leading-[20.5px] whitespace-nowrap">
+                    <p className="font-normal text-[#a5a8ad] text-sm lg:text-[20.5px]  tracking-[0] leading-5 lg:leading-[20.5px] whitespace-normal">
                       {feature.description}
                     </p>
                   </li>
@@ -138,17 +137,15 @@ export const Certificate = () => {
             </div>
           </div>
 
-          <div className="inline-flex items-center gap-[26px] relative flex-[0_0_auto]">
-            <button className="inline-flex items-center justify-center gap-[13px] px-[25px] py-3 relative flex-[0_0_auto] bg-white rounded-[10px] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0c0c0d] transition-colors">
-              <span className="relative w-fit [font-family:'Roboto-Medium',Helvetica] font-medium text-[#000000] text-base tracking-[0] leading-6 whitespace-nowrap">
+          <div className="flex flex-row flex-wrap items-center gap-4 lg:gap-[26px] w-full justify-center">
+            <button className="inline-flex items-center justify-center gap-3 lg:gap-[13px] px-4 lg:px-[25px] py-3 bg-white rounded-[10px] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[#0c0c0d] transition-colors">
+              <span className="font-medium text-[#000000] text-base tracking-[0] leading-6 whitespace-nowrap">
                 Start Your Certification Journey
               </span>
             </button>
 
-            <button className="inline-flex items-center justify-center gap-[13px] px-5 py-3 relative flex-[0_0_auto] rounded-[10px] border border-solid border-white hover:bg-white  hover:text-black 
-            text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0c0c0d] transition-colors">
-              <span className="relative w-fit mt-[-1.00px] [font-family:'Roboto-Medium',Helvetica] font-medium 
-             text-base tracking-[0] leading-6 whitespace-nowrap">
+            <button className="inline-flex items-center justify-center gap-3 lg:gap-[13px] px-4 lg:px-5 py-3 rounded-[10px] border border-solid border-white hover:bg-white hover:text-black text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#0c0c0d] transition-colors">
+              <span className="font-medium text-base tracking-[0] leading-6 whitespace-nowrap">
                 Preview Certificate Sample
               </span>
             </button>

@@ -178,21 +178,40 @@ export default function SuccessStories() {
           />
         </div>
 
-        {/* Navigation Arrows - Desktop only, vertically centered */}
+        {/* Navigation Arrows - All screens, styled for mobile/tablet/desktop */}
+        {/* Desktop: large, side arrows. Mobile/Tablet: small, below card. */}
+        {/* Desktop */}
         <button
           onClick={prevSlide}
-          className="hidden lg:flex absolute z-10 items-center justify-center text-white border-2 border-white rounded-full shadow-md left-[31px] top-1/2 -translate-y-1/2 w-[74px] h-[74px]"
+          className="hidden md:flex absolute z-10 items-center justify-center text-white border-2 border-white rounded-full shadow-md left-[31px] top-1/2 -translate-y-1/2 w-[74px] h-[74px]"
           aria-label="Previous testimonial"
         >
           <span className="font-montserrat flex items-center justify-center pb-3 text-4xl font-normal">‹</span>
         </button>
         <button
           onClick={nextSlide}
-          className="hidden lg:flex absolute z-10 items-center justify-center text-white border-2 border-white rounded-full shadow-md right-[31px] top-1/2 -translate-y-1/2 w-[74px] h-[74px]"
+          className="hidden md:flex absolute z-10 items-center justify-center text-white border-2 border-white rounded-full shadow-md right-[31px] top-1/2 -translate-y-1/2 w-[74px] h-[74px]"
           aria-label="Next testimonial"
         >
           <span className="font-montserrat flex items-center justify-center pb-3 text-4xl font-normal">›</span>
         </button>
+        {/* Mobile/Tablet */}
+        <div className="flex md:hidden w-full justify-center gap-6 mt-6">
+          <button
+            onClick={prevSlide}
+            className="flex items-center justify-center text-white border-2 border-white rounded-full shadow-md w-10 h-10"
+            aria-label="Previous testimonial"
+          >
+            <span className="font-montserrat flex items-center justify-center text-2xl font-normal">‹</span>
+          </button>
+          <button
+            onClick={nextSlide}
+            className="flex items-center justify-center text-white border-2 border-white rounded-full shadow-md w-10 h-10"
+            aria-label="Next testimonial"
+          >
+            <span className="font-montserrat flex items-center justify-center text-2xl font-normal">›</span>
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -45,10 +45,10 @@ const RealProject = () => {
         rounded-none
         shadow-[0px_2px_4px_-2px_rgba(0,0,0,0.1),0px_4px_6px_-1px_rgba(0,0,0,0.1)]
         w-full max-w-[1424px]
-        min-h-[1129px]
+        min-h-[600px] md:min-h-[1129px]
         z-[3]
         mx-auto
-        py-10 px-2
+        py-6 md:py-10 px-2
       "
     >
       {/* Decorative SVG */}
@@ -64,7 +64,7 @@ const RealProject = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center">
+  <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col items-center px-2 md:px-0">
         <header className="flex flex-col items-center gap-5 mb-10">
           <p className="text-2xl text-gray-400 text-center">
             Real Projects. Real Skills. Real Careers.
@@ -74,23 +74,23 @@ const RealProject = () => {
           </h1>
 
           {/* Description */}
-        <div className=" w-full flex flex-col gap-4 items-center">
+        <div className="w-full flex flex-col gap-4 items-center">
           <p
-            className="font-montserrat text-[20px] leading-[25px] font-medium text-white w-[1184px] max-w-full"
+            className="font-montserrat text-base sm:text-lg md:text-[20px] leading-[22px] md:leading-[25px] font-medium text-white w-full max-w-4xl text-center"
           >
             At Edubraining, we go beyond just courses — we create career-ready professionals. Whether you’re diving into Web Development, mastering Java & C++, exploring UI/UX Design, or gearing up for a role in Software Engineering, our platform empowers you with hands-on projects, expert guidance, and real-world learning.
           </p>
           <p
-            className="font-montserrat text-[18px] leading-[25px] font-medium text-gray-400 w-[1184px]  max-w-full"
+            className="font-montserrat text-sm sm:text-base md:text-[18px] leading-[20px] md:leading-[25px] font-medium text-gray-400 w-full max-w-4xl text-center"
           >
             With our unique approach, you’ll develop a strong portfolio, work on industry-level challenges, and step confidently into internships and high-growth tech careers.
           </p>
         </div>
         </header>
 
-        <section className="flex flex-col lg:flex-row items-center gap-10 w-full mx-auto ml-5">
+  <section className="flex flex-col lg:flex-row items-center gap-10 w-full mx-auto px-0 md:px-4">
           {/* Main Image */}
-          <div className="relative w-full max-w-[608px] h-[658px]  bg-cover bg-center rounded-xl overflow-hidden flex-shrink-0 mx-auto">
+          <div className="relative w-full max-w-[400px] md:max-w-[608px] h-[300px] md:h-[658px] bg-cover bg-center rounded-xl overflow-hidden flex-shrink-0 mx-auto">
             <img
               src="/consultation.png"
               alt="Learning environment"
@@ -99,31 +99,31 @@ const RealProject = () => {
             <img
               src="/consultation.png"
               alt="Learning environment illustration"
-              className="absolute w-12 h-10 bottom-4 right-4 object-contain"
+              className="absolute w-10 h-8 md:w-12 md:h-10 bottom-2 md:bottom-4 right-2 md:right-4 object-contain"
             />
           </div>
 
           {/* Benefits */}
-          <aside className="flex flex-col w-full max-w-xl items-start gap-8 px-5">
-            <h2 className="text-white text-2xl sm:text-3xl font-bold mb-2">
+          <aside className="flex flex-col w-full max-w-xl items-start gap-8 px-2 md:px-5 mt-8 md:mt-0">
+            <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-2">
               Top Benefits
             </h2>
             <div className="flex flex-col gap-6 w-full mx-auto leading-5">
               {benefitsData.map((benefit) => (
                 <article
                   key={benefit.id}
-                  className="flex items-center gap-4 px-5 py-4 bg-[#121721] rounded-xl border border-[#0554f7] w-[80%]"
+                  className="flex items-center gap-3 md:gap-4 px-3 md:px-5 py-3 md:py-4 bg-[#121721] rounded-xl border border-[#0554f7] w-full md:w-[80%]"
                 >
                   <img
-                    className="w-10 h-10 object-contain"
+                    className="w-8 h-8 md:w-10 md:h-10 object-contain"
                     alt={benefit.iconAlt}
                     src={benefit.icon}
                   />
                   <div className="flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-1">
+                    <h3 className="text-base md:text-lg font-semibold text-white mb-1">
                       {benefit.title}
                     </h3>
-                    <p className="text-base text-[#abaeb2] leading-5">
+                    <p className="text-sm md:text-base text-[#abaeb2] leading-5">
                       {benefit.description}
                     </p>
                   </div>
