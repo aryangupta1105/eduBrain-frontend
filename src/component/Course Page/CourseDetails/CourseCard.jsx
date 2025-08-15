@@ -1,4 +1,5 @@
-import { Link } from "lucide-react";
+
+
 import * as React from "react";
 
 function CourseCard() {
@@ -40,9 +41,9 @@ function CourseCard() {
               </span>
             </div>
             <div className="flex flex-col mt-2.5 w-full">
-              <button className="flex gap-2.5 justify-center items-center px-4 sm:px-8 md:px-16 py-2 w-full text-sm sm:text-base text-black bg-white rounded-lg bg-blend-normal max-md:px-3">
-                <Link to={"/billing"} className="self-stretch my-auto">Buy Now</Link>
-              </button>
+              <a  href="/billing" className="flex gap-2.5 justify-center items-center px-4 sm:px-8 md:px-16 py-2 w-full text-sm sm:text-base text-black bg-white rounded-lg bg-blend-normal max-md:px-3">
+                <span className="self-stretch my-auto">Buy Now</span>
+              </a>
               <p className="self-start mt-2 text-xs sm:text-sm text-center text-ellipsis text-zinc-400">
                 Purchase this course to get access
               </p>
