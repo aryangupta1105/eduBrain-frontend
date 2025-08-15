@@ -24,7 +24,9 @@ import Reset from "./component/Resetpass";
 import LearningExperienceSection from "./component/Learning";
 import EduBrainingWebsite from "./component/About";
 import WhatMakesUsDifferent from "./component/Welcome";
+
 import ContactPage from "./component/Contact Us/ContactPage";
+import { BillingPage } from "./component/Billing Page/BillingPage";
 
 export default function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -51,6 +53,7 @@ export default function App() {
         <Navbar onLoginClick={handleLoginClick} />
         <main className="flex-grow">
           <Routes>
+            <Route path="/billing" element={<BillingPage />} />
             <Route
               path="/"
               element={
