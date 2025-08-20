@@ -27,6 +27,10 @@ import WhatMakesUsDifferent from "./component/Welcome";
 
 import ContactPage from "./component/Contact Us/ContactPage";
 import { BillingPage } from "./component/Billing Page/BillingPage";
+import CoursesSectionHome from "./component/Home/courses/CoursesSectionHome";
+import ProcessSection from "./component/Home/Path to Success/ProcessSection";
+import SuccessStories from "./component/Course Page/SuccessStories";
+
 
 export default function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -62,6 +66,11 @@ export default function App() {
                   <LearningExperienceSection />
                   <EduBrainingWebsite />
                   <WhatMakesUsDifferent />
+                  <CoursesSectionHome/>
+                  <ProcessSection/>
+                  <SuccessStories subheading={"How Edubraining Boosts Your Careers"} heading={"Testimonial"} />
+                  <FAQSection/>
+                  
                   {/*
                     <TechCoursesSection />
                     <SuccessPathInfographic />

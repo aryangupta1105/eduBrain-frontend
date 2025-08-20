@@ -13,10 +13,8 @@ module.exports = {
         fontwhite: "var(--fontwhite)",
         "variable-collection-color-dull":
           "var(--variable-collection-color-dull)",
-        "variable-collection-color-dull-duplicate":
-          "var(--variable-collection-color-dull-duplicate)",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };

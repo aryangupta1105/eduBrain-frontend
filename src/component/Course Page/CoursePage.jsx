@@ -16,7 +16,7 @@ const CoursePage = () => {
       <CourseDetailPage />
       {/* course hero sub section */}
       <Certificate/>
-      <SuccessStories/>
+  <SuccessStories heading={"Real Success Stories"} subheading={"Learners Growing with Edubraining"} />
       <RealProject/>
       <ReferAndEarn/>
       <FAQSection />

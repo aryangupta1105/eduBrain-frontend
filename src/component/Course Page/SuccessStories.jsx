@@ -52,7 +52,7 @@ function TestimonialCard({ testimonial }) {
 }
 
 
-export default function SuccessStories() {
+export default function SuccessStories({ heading, subheading  }) {
   const [startIndex, setStartIndex] = useState(0);
 
   const testimonials = [
@@ -137,7 +137,7 @@ export default function SuccessStories() {
                 className="font-roboto text-xl lg:text-2xl font-normal leading-8"
                 style={{ color: '#91B5FE' }}
               >
-                Real Success Stories
+                {heading}
               </div>
 
               {/* Main Title */}
@@ -145,7 +145,7 @@ export default function SuccessStories() {
                 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold leading-tight lg:leading-snug"
                 style={{ color: '#0356FF' }}
               >
-                Learners Growing with Edubraining
+                {subheading}
               </h1>
 
               {/* Description */}
