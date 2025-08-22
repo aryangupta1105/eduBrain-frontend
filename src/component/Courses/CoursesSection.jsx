@@ -39,7 +39,10 @@ export const CoursesSection = () => {
         </header>
       </div>
 
-      <div className="grid gap-5 sm:gap-8 md:gap-12 px-2 sm:px-5 py-0 mx-auto mt-10 sm:mt-28 mb-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1216px]">
+      <div className="grid justify-center gap-10 sm:gap-8 md:gap-12 
+  px-2 sm:px-5  py-0 mx-auto mt-10 sm:mt-28 mb-0 
+  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1216px]">
+
         {Array.from({ length: 9 }, (_, index) => (
           <CourseCard
             key={index}

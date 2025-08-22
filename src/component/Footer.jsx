@@ -27,70 +27,72 @@ const Footer = () => {
 
                     </div>
 
-                    {/* Explore Section */}
-                    <div className="lg:col-span-1">
-                        <h4 className="text-[20.5px] leading-[28px] font-inter font-semibold align-middle tracking-[0px] mb-6">Explore</h4>
-
-                        <ul className="space-y-2 font-Roboto ">
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    About Us
-                                </a>
-
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Courses
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Process
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Certification
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Refund Policy
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Support Section */}
-                    <div className="lg:col-span-1">
-                        <h4 className="text-[20.5px] leading-[28px] font-inter font-semibold align-middle tracking-[0px] mb-6">Support</h4>
-                        <ul className="space-y-2 font-Roboto">
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    FAQs
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Privacy Policy
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Contact Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Terms of Service
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
-                                    Careers
-                                </a>
-                            </li>
-                        </ul>
+                    {/* Explore & Support Section - side by side on mobile */}
+                    <div className="lg:col-span-2 w-full">
+                        <div className="flex flex-col gap-8 sm:gap-12 max-sm:flex-row max-sm:gap-4 max-sm:justify-between">
+                            {/* Explore Section */}
+                            <div className="w-full">
+                                <h4 className="text-[20.5px] leading-[28px] font-inter font-semibold align-middle tracking-[0px] mb-6">Explore</h4>
+                                <ul className="space-y-2 font-Roboto ">
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            About Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Courses
+                                        </a>
+                                    </li> 
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Process
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Certification
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Refund Policy
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* Support Section */}
+                            <div className="w-full">
+                                <h4 className="text-[20.5px] leading-[28px] font-inter font-semibold align-middle tracking-[0px] mb-6">Support</h4>
+                                <ul className="space-y-2 font-Roboto">
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            FAQs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Privacy Policy
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Contact Us
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Terms of Service
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" className="text-white hover:text-white transition-colors text-[14px] leading-[20px] font-normal font-roboto align-middle tracking-[0px]">
+                                            Careers
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Newsletter Section */}

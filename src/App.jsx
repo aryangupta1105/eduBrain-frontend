@@ -7,32 +7,14 @@ import Signup from "./component/Signup";
 import Password from "./component/Password";
 import OTP from "./component/Otp";
 import Forget from "./component/Forget";
-import Footer from "./component/Footer";
-import FAQSection from "./component/Faq";
-import TestimonialsSection from "./component/Testimonial";
-import EduBrainingHero from "./component/Hero";
-import TechJourneyCTA from "./component/Next";
-import InternshipOpportunities from "./component/Internship";
-import CertificationAchievement from "./component/Helps";
-import SuccessPathInfographic from "./component/process";
-import TechCoursesSection from "./component/Tech";
 import CoursesSection from "./component/Courses/CoursesSection";
 import CoursePage from "./component/Course Page/CoursePage";
-import EdubrainingWelcomeSection from "./component/Welcome";
 import ForgetOTP from "./component/Forgetotp";
 import Reset from "./component/Resetpass";
-import LearningExperienceSection from "./component/Learning";
-import EduBrainingWebsite from "./component/About";
-import WhatMakesUsDifferent from "./component/Welcome";
 
 import ContactPage from "./component/Contact Us/ContactPage";
 import { BillingPage } from "./component/Billing Page/BillingPage";
-import CoursesSectionHome from "./component/Home/courses/CoursesSectionHome";
-import ProcessSection from "./component/Home/Path to Success/ProcessSection";
-import SuccessStories from "./component/Course Page/SuccessStories";
-import NextJourney from "./component/Home/Next Journey/NextJourney";
-import CertificationSection from "./component/Home/Certificates and Achievements/CertificationSection";
-import Tab from "./component/Home/Tab Page/Tab";
+import Home from "./component/Home/Home";
 
 
 export default function App() {
@@ -65,18 +47,7 @@ export default function App() {
               path="/"
               element={
                 <>
-                  <EduBrainingHero />
-                  <LearningExperienceSection />
-                  <EduBrainingWebsite />
-                  <WhatMakesUsDifferent />
-                  <CoursesSectionHome/>
-                  <ProcessSection/>
-                  <CertificationSection/>
-                  <Tab/>
-                  <SuccessStories subheading={"How Edubraining Boosts Your Careers"} heading={"Testimonial"} />
-                  <NextJourney/>
-                  <FAQSection/>
-                  <Footer/>
+                  <Home/>
                   
                   {/*
                     <TechCoursesSection />

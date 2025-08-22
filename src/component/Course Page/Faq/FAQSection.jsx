@@ -55,7 +55,7 @@ const faqData = [
 
 const FAQSection = () => {
   return (
-    <section className="flex relative flex-col items-center px-5 pt-24 pb-0 w-full  min-h-[1370px] max-md:px-5 max-md:py-16 max-md:min-h-[auto] max-sm:px-4 max-sm:py-10">
+    <section className="flex relative flex-col items-center px-5  w-full py-20 bg-neutral-950  min-h-[1370px] max-md:px-5 max-md:py-16 max-md:min-h-[auto] max-sm:px-4 max-sm:py-10">
       <BackgroundSVG position="left" />
       <BackgroundSVG position="right" />
 
