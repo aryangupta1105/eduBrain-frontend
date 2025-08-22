@@ -15,7 +15,7 @@ const CourseCard = ({ course }) => {
   } = course;
 
   return (
-  <article className="flex relative flex-col justify-between items-start bg-white rounded-lg shadow-md h-[592px] w-[286px] max-md:w-[280px] max-sm:w-full max-sm:max-w-xs">
+  <article className="flex relative flex-col justify-between items-start bg-white rounded-lg shadow-md h-[592px] w-[286px] max-md:w-[280px] max-sm:w-full max-sm:max-w-none max-sm:px-0" style={{maxWidth: '100vw'}}>
       {image.isSpecial ? (
         <div className="flex overflow-hidden relative justify-center items-center h-48 rounded-[8px_8px_0_0] w-[286px] max-md:w-[280px] max-sm:w-full">
           <img
@@ -32,7 +32,7 @@ const CourseCard = ({ course }) => {
         />
       )}
 
-  <div className="box-border flex flex-col flex-1 justify-between p-6 w-[286px] max-md:w-[280px] max-sm:p-5 max-sm:w-full">
+  <div className="box-border flex flex-col flex-1 justify-between p-6 w-[286px] max-md:w-[280px] max-sm:p-5 max-sm:w-full max-sm:max-w-none">
   <div className="flex relative flex-col justify-between items-center h-full min-h-[340px]">
           <CourseIcon iconSvg={icon} />
 

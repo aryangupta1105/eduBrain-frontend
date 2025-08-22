@@ -35,22 +35,22 @@ const WhatMakesUsDifferent = () => {
   ];
 
   return (
-    <div className="bg-[#0C0C0D] relative min-h-screen p-4 sm:p-8">
+  <div className="bg-[#0C0C0D] relative min-h-screen px-2 sm:px-8 flex flex-col items-center w-full">
       
 
-      <div className="max-w-4xl mx-auto pt-6 sm:pt-10 pb-10 sm:pb-20">
+  <div className="w-full max-w-4xl mx-auto pt-6 sm:pt-10 pb-10 sm:pb-20 flex flex-col items-center">
         {/* Header */}
         <h1 className="text-3xl sm:text-5xl font-bold text-center mb-8 sm:mb-12">
           <span className="text-3xl sm:text-5xl font-bold bg-[linear-gradient(90.21deg,#003FEA_-0.74%,#91B3FF_101.93%)] bg-clip-text text-transparent underline decoration-blue-400">What Makes Us Different</span>
         </h1>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 mb-10 sm:mb-20">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 mb-10 sm:mb-20 w-full">
           {/* First 4 features in 2x2 grid */}
           {features.slice(0, 4).map((feature) => (
             <div
               key={feature.id}
-              className="bg-[#121721] rounded-3xl p-4 sm:p-6 text-center hover:bg-gray-750 transition-colors py-2 h-auto min-h-[160px] sm:h-[190px] duration-200 flex flex-col justify-center"
+              className="bg-[#121721] rounded-3xl p-4 sm:p-6 text-center hover:bg-gray-750 transition-colors py-2 h-auto min-h-[160px] sm:h-[190px] duration-200 flex flex-col justify-center w-full max-w-md mx-auto"
             >
               <img 
                 src={feature.image} 
@@ -68,8 +68,8 @@ const WhatMakesUsDifferent = () => {
         </div>
 
         {/* Last feature centered */}
-        <div className="flex justify-center -mt-2 sm:-mt-5">
-          <div  className="bg-[#121721] rounded-3xl p-4 sm:p-6 text-center text-wrap hover:bg-gray-750 transition-colors py-2 h-auto min-h-[160px] sm:h-[190px] duration-200 w-full max-w-md">
+        <div className="flex justify-center -mt-2 sm:-mt-5 w-full">
+          <div  className="bg-[#121721] rounded-3xl p-4 sm:p-6 text-center text-wrap hover:bg-gray-750 transition-colors py-2 h-auto min-h-[160px] sm:h-[190px] duration-200 w-full max-w-md mx-auto">
             <img 
               src={features[4].image} 
               alt={features[4].title}

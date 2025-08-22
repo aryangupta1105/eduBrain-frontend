@@ -33,7 +33,7 @@ const EdubrainingHero = () => {
 </svg>
  */
   return (
-    <div className="min-h-screen bg-[#0C0C0D] text-white relative overflow-hidden">
+    <div className="min-h-screen  bg-[#0C0C0D] text-white relative overflow-hidden">
       <svg width="345" height="193" viewBox="0 0 345 193" fill="none" xmlns="http://www.w3.org/2000/svg" className='absolute h-[580.88px] w-[584px] -top-36 text-7xl opacity-15 -right-20 object-cover'>
         <path d="M345 53.0222L327.774 35.8333H128.663M345 28.25L336.894 20.6666H174.768M345 3.98329L340.44 0.949951H212.766M345 104.589H245.191V146.044H201.113L154.502 99.0277H45.5739M345 121.778H264.95V162.728H195.54L147.916 115.711H35.9476M345 137.45H279.643V178.906H187.434L139.81 131.383H0.989258M345 152.111H303.962V192.05H345" stroke="url(#paint0_linear_92_884)" stroke-width="0.6"/>
         <defs>

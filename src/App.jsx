@@ -30,6 +30,9 @@ import { BillingPage } from "./component/Billing Page/BillingPage";
 import CoursesSectionHome from "./component/Home/courses/CoursesSectionHome";
 import ProcessSection from "./component/Home/Path to Success/ProcessSection";
 import SuccessStories from "./component/Course Page/SuccessStories";
+import NextJourney from "./component/Home/Next Journey/NextJourney";
+import CertificationSection from "./component/Home/Certificates and Achievements/CertificationSection";
+import Tab from "./component/Home/Tab Page/Tab";
 
 
 export default function App() {
@@ -53,7 +56,7 @@ export default function App() {
 
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen w-full">
         <Navbar onLoginClick={handleLoginClick} />
         <main className="flex-grow">
           <Routes>
@@ -68,8 +71,12 @@ export default function App() {
                   <WhatMakesUsDifferent />
                   <CoursesSectionHome/>
                   <ProcessSection/>
+                  <CertificationSection/>
+                  <Tab/>
                   <SuccessStories subheading={"How Edubraining Boosts Your Careers"} heading={"Testimonial"} />
+                  <NextJourney/>
                   <FAQSection/>
+                  <Footer/>
                   
                   {/*
                     <TechCoursesSection />

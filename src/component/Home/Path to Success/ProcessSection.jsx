@@ -96,43 +96,73 @@ const ProcessSection = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@600;700&family=Roboto:wght@400&display=swap"
       />
-  <section className="overflow-hidden relative w-full bg-[#0C0C0D] min-h-[3002px] max-xl:min-h-[2200px] max-lg:min-h-[1800px] max-md:px-5 max-md:py-10 max-md:min-h-[auto] max-sm:px-2 max-sm:py-5 max-sm:min-h-[auto]">
-        <svg width="495" height="675" viewBox="0 0 495 675" fill="none" xmlns="http://www.w3.org/2000/svg" className='absolute -top-64 -left-5'>
-        <g filter="url(#filter0_f_396_1025)">
-        <rect width="433" height="275" transform="matrix(1 0 0 -1 -138 475)" fill="url(#paint0_linear_396_1025)" fill-opacity="0.3"/>
-        </g>
-        <defs>
-        <filter id="filter0_f_396_1025" x="-338" y="0" width="833" height="675" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_396_1025"/>
-        </filter>
-        <linearGradient id="paint0_linear_396_1025" x1="433" y1="-21.0191" x2="125.676" y2="469.701" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#9AC4FE"/>
-        <stop offset="1" stop-color="#1545C2"/>
-        </linearGradient>
-        </defs>
+      <section className="relative w-full bg-[#0C0C0D] py-20 overflow-hidden">
+        {/* Background Glow */}
+        <svg
+          width="495"
+          height="675"
+          viewBox="0 0 495 675"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="absolute -top-64 -left-5"
+        >
+          <g filter="url(#filter0_f_396_1025)">
+            <rect
+              width="433"
+              height="275"
+              transform="matrix(1 0 0 -1 -138 475)"
+              fill="url(#paint0_linear_396_1025)"
+              fillOpacity="0.3"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_f_396_1025"
+              x="-338"
+              y="0"
+              width="833"
+              height="675"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="BackgroundImageFix"
+                result="shape"
+              />
+              <feGaussianBlur
+                stdDeviation="100"
+                result="effect1_foregroundBlur_396_1025"
+              />
+            </filter>
+            <linearGradient
+              id="paint0_linear_396_1025"
+              x1="433"
+              y1="-21.0191"
+              x2="125.676"
+              y2="469.701"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#9AC4FE" />
+              <stop offset="1" stopColor="#1545C2" />
+            </linearGradient>
+          </defs>
         </svg>
+
         <BackgroundElements />
 
+        {/* Header */}
         <ProcessHeader />
 
-        <main className="flex absolute left-2/4 flex-col gap-12 items-start -translate-x-2/4 top-[297px] w-[1024px] z-[2] max-xl:w-[900px] max-lg:w-[700px] max-md:gap-10 max-md:top-[200px] max-md:w-[98%] max-sm:static max-sm:left-0 max-sm:translate-x-0 max-sm:top-0 max-sm:w-full max-sm:gap-8">
-          <div className="absolute w-1 bg-zinc-400 h-[2242px] left-[510px] top-[178px] z-[1] max-xl:left-[450px] max-lg:left-[350px] max-md:hidden" />
+        {/* Steps Section */}
+        <main className="relative flex flex-col gap-12 items-center mt-10  md:mt-56 w-full max-w-[1024px] mx-auto px-4 z-[2]">
+          {/* Vertical Line */}
+          <div className="absolute w-1 bg-zinc-400 top-0 bottom-0 left-1/2 -translate-x-1/2 z-0" />
 
           {processSteps.map((step, index) => (
-            <ProcessStep
-              key={step.stepNumber}
-              stepNumber={step.stepNumber}
-              title={step.title}
-              description={step.description}
-              imageSrc={step.imageSrc}
-              isReversed={step.isReversed}
-              imageOpacity={step.imageOpacity}
-              cardOpacity={step.cardOpacity}
-              cardHeight={step.cardHeight}
-              hasDecorations={step.hasDecorations}
-            />
+            <ProcessStep key={step.stepNumber} step={step} index={index} />
           ))}
         </main>
       </section>
