@@ -1,7 +1,12 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
 
 import Navbar from "./component/Navbar";
+
 import Login from "./component/Login";
 import Signup from "./component/Signup";
 import Password from "./component/Password";
@@ -15,6 +20,9 @@ import Reset from "./component/Resetpass";
 import ContactPage from "./component/Contact Us/ContactPage";
 import { BillingPage } from "./component/Billing Page/BillingPage";
 import Home from "./component/Home/Home";
+import Dashboard from "./component/Dashboard/Hero/Dashboard";
+import Profile from "./component/Dashboard/DashboardMain";
+import MainContent from "./component/Dashboard/Hero/MainContent";
 
 
 export default function App() {
@@ -23,8 +31,8 @@ export default function App() {
   const [showPassword, setShowPassword] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
   const [showForgotPassword, setShowForgotPassword] = useState(false);
-  const [showForgetotp, setShowForgetotp] = useState(false); // ✅ Added
-  const [showResetPassword, setShowResetPassword] = useState(false); // ✅ Added
+  const [showForgetotp, setShowForgetotp] = useState(false);
+  const [showResetPassword, setShowResetPassword] = useState(false);
 
   const handleLoginClick = () => {
     setShowSignup(false);
@@ -36,41 +44,18 @@ export default function App() {
     setShowSignup(true);
   };
 
-  return (
-    <Router>
-      <div className="flex flex-col min-h-screen w-full">
-        <Navbar onLoginClick={handleLoginClick} />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/billing" element={<BillingPage />} />
-            <Route
-              path="/"
-              element={
-                <>
-                  <Home/>
-                  
-                  {/*
-                    <TechCoursesSection />
-                    <SuccessPathInfographic />
-                    <CertificationAchievement />
-                    <InternshipOpportunities />
-                    <TestimonialsSection />
-                    <TechJourneyCTA />
-                    <FAQSection />
-                    <Footer />
-                  */}
-                </>
-              }
-            />
-            <Route path="/courses" element={<CoursesSection />} />
-            <Route path="/course-details" element={
-             
-                <CoursePage />
-                
-            } />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+  const isDashboardRoute = location.pathname.startsWith("/profile-dashboard");
+  
 
+  // Modal logic wrapper for all routes
+  function ModalWrapper({ children }) {
+    const location = useLocation();
+    const isDashboardRoute = location.pathname.startsWith("/profile-dashboard");
+    return (
+      <div className="flex flex-col min-h-screen w-full">
+        {!isDashboardRoute && <Navbar onLoginClick={handleLoginClick} />}
+        <main className="flex-grow">
+          {children}
           {showLogin && (
             <Login
               onClose={() => setShowLogin(false)}
@@ -81,7 +66,6 @@ export default function App() {
               }}
             />
           )}
-
           {showSignup && (
             <Signup
               onClose={() => setShowSignup(false)}
@@ -92,7 +76,6 @@ export default function App() {
               }}
             />
           )}
-
           {showPassword && (
             <Password
               onClose={() => setShowPassword(false)}
@@ -106,7 +89,6 @@ export default function App() {
               }}
             />
           )}
-
           {showOTP && (
             <OTP
               onClose={() => setShowOTP(false)}
@@ -120,7 +102,6 @@ export default function App() {
               }}
             />
           )}
-
           {showForgetotp && (
             <ForgetOTP
               onClose={() => setShowForgetotp(false)}
@@ -139,7 +120,6 @@ export default function App() {
               }}
             />
           )}
-
           {showResetPassword && (
             <Reset
               onClose={() => setShowResetPassword(false)}
@@ -153,7 +133,6 @@ export default function App() {
               }}
             />
           )}
-
           {showForgotPassword && (
             <Forget
               onClose={() => setShowForgotPassword(false)}
@@ -169,6 +148,66 @@ export default function App() {
           )}
         </main>
       </div>
-    </Router>
-  );
+    );
+  }
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <ModalWrapper>
+          <Home />
+        </ModalWrapper>
+      ),
+    },
+    {
+      path: "/billing",
+      element: (
+        <ModalWrapper>
+          <BillingPage />
+        </ModalWrapper>
+      ),
+    },
+    {
+      path: "/courses",
+      element: (
+        <ModalWrapper>
+          <CoursesSection />
+        </ModalWrapper>
+      ),
+    },
+    {
+      path: "/course-details",
+      element: (
+        <ModalWrapper>
+          <CoursePage />
+        </ModalWrapper>
+      ),
+    },
+    {
+      path: "/contact",
+      element: (
+        <ModalWrapper>
+          <ContactPage />
+        </ModalWrapper>
+      ),
+    },
+    {
+      path: "/profile-dashboard",
+      element: <Dashboard />, // Dashboard handles its own navbar and sidebar
+      children: [
+        { index: true, element: <MainContent /> },
+      
+        { path: "my-profile", element: <Profile /> },
+        // { path: "mycourses", element: <MyCourses /> },
+        // { path: "assignments", element: <Assignments /> },
+        // { path: "certificate", element: <Certificate /> },
+        // { path: "resume-builder", element: <ResumeBuilder /> },
+        // { path: "referearn", element: <Referearn /> },
+        // { path: "mentor", element: <Mentor /> },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
 }
