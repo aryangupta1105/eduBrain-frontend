@@ -36,8 +36,8 @@ function Sidebar() {
   ];
 
   return (
-    <aside className="w-1/5 max-md:ml-0 max-md:w-full z-10">
-      <nav className="px-2.5 py-5 mx-auto w-full border-r mt-1 bg-[rgba(36 ,107, 253 , 0.5)] border-blue-600 border-solid min-h-[803px] max-md:mt-10">
+    <aside className="w-1/5 max-md:ml-0 max-md:w-full z-10 sticky left-0 h-screen">
+      <nav className="px-2.5 py-5 mx-auto w-full border-r mt-1 bg-[#246bfd]/11 border-blue-600 border-solid h-full max-md:mt-10">
         <div className="flex flex-col justify-center items-start w-full">
           {menuItems.map((item, index) => (
             <div key={index} className={index > 0 ? "mt-8" : ""}>

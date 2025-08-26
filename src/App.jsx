@@ -25,6 +25,7 @@ import Dashboard from "./component/Dashboard/Hero/Dashboard";
 import Profile from "./component/Dashboard/DashboardMain";
 import MainContent from "./component/Dashboard/Hero/MainContent";
 import {MyCourses} from "./component/Dashboard/MyCourses"
+import Certificate from "./component/Dashboard/Certificate";
 
 
 export default function App() {
@@ -203,7 +204,7 @@ export default function App() {
         { path: "my-profile", element: <Profile /> },
         { path: "mycourses", element: <MyCourses /> },
         // { path: "assignments", element: <Assignments /> },
-        // { path: "certificate", element: <Certificate /> },
+        { path: "certificate", element: <Certificate /> },
         // { path: "resume-builder", element: <ResumeBuilder /> },
         // { path: "referearn", element: <Referearn /> },
         // { path: "mentor", element: <Mentor /> },
