@@ -5,9 +5,9 @@ import Faq from './Faq'
 const Certificate = () => {
   return (
     <div>
-      <main className="flex w-[1020px] items-start gap-[54px] relative rounded-[5px] mt-10  bg-[#0c0c0d]">
+      <main className="flex w-full items-start gap-[54px] relative rounded-[5px] mt-10  bg-[#0c0c0d]">
         {/* Left Side: Certificate Info/Download */}
-        <section className="flex flex-col w-5/12 min-w-[320px] min-h-[900px]  items-start gap-6 p-6 border border-[#1545c2] rounded-[5px] bg-[#101014]">
+        <section className="flex flex-col w-5/12 min-w-[320px] min-h-[800px]  items-start gap-6 p-6 border border-[#1545c2] rounded-[5px] bg-[#101014]">
           <h1 className="text-[32px] font-semibold text-[#0356ff] mb-2">My Certificates</h1>
           <p className="text-base text-[#b9b9b9] mb-6">View and download your course completion certificates.</p>
           {[1,2].map((i) => (
@@ -18,9 +18,9 @@ const Certificate = () => {
           ))}
         </section>
         {/* Right Side: Certificate Image and FAQ */}
-        <section className="flex flex-col w-7/12 items-center gap-[30px] relative flex-[0_0_auto] mr-[-20.00px]">
+        <section className="flex flex-col w-7/12 px-10 items-center gap-[30px] relative flex-[0_0_auto] mr-[-20.00px]">
           <img
-            className="w-full max-w-[563.76px] h-auto lg:h-[398.6px] object-contain"
+            className="w-full  h-auto lg:h-[398.6px] object-contain"
             alt="Certificate of completion sample"
             src={"/certificate.png"}
           />
