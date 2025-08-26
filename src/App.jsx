@@ -24,6 +24,7 @@ import Home from "./component/Home/Home";
 import Dashboard from "./component/Dashboard/Hero/Dashboard";
 import Profile from "./component/Dashboard/DashboardMain";
 import MainContent from "./component/Dashboard/Hero/MainContent";
+import {MyCourses} from "./component/Dashboard/MyCourses"
 
 
 export default function App() {
@@ -200,7 +201,7 @@ export default function App() {
         { index: true, element: <MainContent /> },
       
         { path: "my-profile", element: <Profile /> },
-        // { path: "mycourses", element: <MyCourses /> },
+        { path: "mycourses", element: <MyCourses /> },
         // { path: "assignments", element: <Assignments /> },
         // { path: "certificate", element: <Certificate /> },
         // { path: "resume-builder", element: <ResumeBuilder /> },

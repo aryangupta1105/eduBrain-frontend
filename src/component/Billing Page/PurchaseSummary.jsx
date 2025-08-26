@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import Hr from "../Hr";
+import { EnrollmentModal } from "./EnrollmentModal";
 
 export const PurchaseSummarySection = () => {
   const [couponCode, setCouponCode] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const testimonialData = {
     quote:
       "Edubraining truly transformed my skills! The mentorship and projects prepared me for my dream tech job.",
     author: "Aman Singh, Data Analyst",
   };
-
   const purchaseData = {
     price: 1299,
     discount: 129,
@@ -24,8 +25,8 @@ export const PurchaseSummarySection = () => {
   };
 
   const handleProceedToPay = () => {
-    // Handle payment processing
-    console.log("Proceeding to payment");
+  setShowModal(true);
+  setTimeout(() => setShowModal(false), 5000);
   };
 
   return (
@@ -118,7 +119,16 @@ export const PurchaseSummarySection = () => {
               </div>
             </div>
 
-            
+              {showModal && (
+                <div
+                  className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-md"
+                  onClick={() => setShowModal(false)}
+                >
+                  <div className="relative" onClick={e => e.stopPropagation()}>
+                    <EnrollmentModal />
+                  </div>
+                </div>
+              )}
               <div className="relative w-full text-white">
                 <input placeholder="Apply Coupon code"
                 className="flex items-center justify-between px-[32.91px] py-[21.94px] relative self-stretch w-full flex-[0_0_auto] rounded-[16.45px] placeholder:text-gray-200  text-md border-[1.1px] border-solid border-gray-200"

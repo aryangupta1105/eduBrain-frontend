@@ -5,7 +5,7 @@ function Navbar() {
 
   return (
     <header className="flex absolute top-0 right-0 z-0 flex-col shadow-sm bg-blend-normal w-full h-[89px]  max-md:max-w-full">
-      <nav className="flex z-10 flex-col justify-center px-16 py-2.5 w-full border border-blue-800 border-solid bg-blend-normal  bg-[#246bfd]/21 bg-opacity-10 max-md:px-5 max-md:max-w-full">
+      <nav className="flex z-10 flex-col justify-center px-16 py-2.5 w-full border border-blue-800 border-solid bg-blend-normal  bg-[#246bfd]/11 max-md:px-5 max-md:max-w-full">
         <div className="flex flex-wrap gap-10 justify-between items-center w-full max-w-[1253px] max-md:max-w-full">
           <img
             src="https://api.builder.io/api/v1/image/assets/92dbd61d4c7248e0a6300c516c4d3fc9/553368b5f4c2cdeed08ef104347ef0eae9e681d4?placeholderIfAbsent=true"

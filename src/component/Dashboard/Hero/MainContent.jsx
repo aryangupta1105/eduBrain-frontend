@@ -54,14 +54,13 @@ return (
                             Here's a snapshot of your learning journey.
                         </p>
                     </div>
-                    <section className="flex flex-wrap gap-5 items-start mt-11 max-md:mt-10 max-md:max-w-full">
+                    <section className="flex flex-row flex-wrap justify-between items-center mt-11 max-md:mt-10 max-md:max-w-full gap-6">
                         {statsData.map((stat, index) => (
                             <StatsCard
                                 key={index}
                                 icon={stat.icon}
                                 title={stat.title}
                                 value={stat.value}
-                                className="bg-[rgba(36,107,253,0.5)]"
                             />
                         ))}
                     </section>
