@@ -3,6 +3,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
+  useLocation,
 } from "react-router-dom";
 
 import Navbar from "./component/Navbar";
