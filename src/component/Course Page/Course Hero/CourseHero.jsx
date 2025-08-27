@@ -33,11 +33,11 @@ export const CourseHero= () => {
               <span className="text-base font-medium leading-6 text-white">See the curriculum</span>
             </button>
           </div>
-          <div className="flex gap-2 items-end mt-2">
-            <span className="text-base sm:text-xl font-bold leading-7 text-white">₹1299</span>
-            <span className="text-xs sm:text-sm leading-6 text-zinc-400 flex gap-2"> <span className='line-through'>₹2598</span>
-          (LIMITED TIME OFFER)</span>
-          </div>
+            <div className="flex gap-2 items-end mt-2">
+              <span className="text-base sm:text-xl font-bold leading-7 text-white">₹2700</span>
+              <span className="text-xs sm:text-sm leading-6 text-zinc-400 flex gap-2"> <span className='line-through'>₹2999</span>
+            (10% OFF)</span>
+            </div>
         </div>
       </section>
 

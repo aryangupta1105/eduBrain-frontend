@@ -31,9 +31,8 @@ const faqData = [
 
 const Faq = () => {
   return (
-    <section className="flex relative flex-col items-center px-5  w-full py-20 bg-neutral-950  max-md:px-5 max-md:py-16 max-md:min-h-[auto] max-sm:px-4 max-sm:py-10">
-      <BackgroundSVG position="left" />
-      <BackgroundSVG position="right" />
+    <section className="flex relative flex-col items-center px-5  w-full py-20 bg-[#0c0c0d] max-md:px-5 max-md:py-16 max-md:min-h-[auto] max-sm:px-4 max-sm:py-10">
+      
 
       <header className="flex relative flex-col gap-6 items-center mb-24 w-full max-w-[745px] z-[2] max-sm:gap-5 max-sm:mb-10">
         <p className="text-2xl leading-8 text-blue-300 max-sm:text-xl max-sm:leading-7">

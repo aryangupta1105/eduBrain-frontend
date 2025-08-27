@@ -20,9 +20,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "76",
       duration: "10h 30m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {
@@ -42,9 +42,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "67",
       duration: "15h 43m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {
@@ -64,9 +64,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "80",
       duration: "13h 36m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {
@@ -89,9 +89,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "84",
       duration: "15h 36m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {
@@ -117,9 +117,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "32",
       duration: "6h 10m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {
@@ -145,9 +145,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "50",
       duration: "9h 10m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {
@@ -174,9 +174,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "70",
       duration: "11h 50m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {
@@ -202,9 +202,9 @@ const CoursesSectionHome = () => {
       ],
       lectures: "34",
       duration: "11h 50m",
-      originalPrice: "₹2598",
-      discountedPrice: "₹1299",
-      discount: "50% OFF"
+  originalPrice: "₹2999",
+  discountedPrice: "₹2700",
+  discount: "10% OFF"
     },
     {
       image: {

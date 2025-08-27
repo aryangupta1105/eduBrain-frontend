@@ -74,7 +74,7 @@ const CourseCard = ({ course  , p}) => {
 
 export const MyCourses = () => {
   return (
-    <main className="flex flex-col w-[1020px] items-start gap-[54px] p-10 relative rounded-[5px] mt-10 border border-solid border-[#1545c2]">
+    <main className="flex flex-col w-[1220px] items-start gap-[54px] p-10 relative rounded-[5px] mt-10 border border-solid border-[#1545c2]">
       <header className="inline-flex items-center justify-center gap-[19.51px] px-0 py-[19.51px] relative flex-[0_0_auto]">
         <h1 className="relative w-fit mt-[-3.90px] [font-family:'Inter-SemiBold',Helvetica] font-semibold text-[#0356ff] text-[41.9px] tracking-[0] leading-[39.1px] whitespace-nowrap">
           My Courses

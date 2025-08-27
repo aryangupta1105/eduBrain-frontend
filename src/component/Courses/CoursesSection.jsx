@@ -4,6 +4,10 @@ import CourseCard from './CourseCard';
 
 
 export const CoursesSection = () => {
+  const basePrice = 2999;
+  const discountPercent = 10;
+  const discountAmount = Math.round(basePrice * discountPercent / 100);
+  const finalPrice = basePrice - discountAmount;
   const courseData = {
     title: "Powerful Data Analysis with Power BI: From Beginner to Pro",
     description: "Unlock the full potential of your data! Master Power BI for insightful data analysis and stunning...",
@@ -13,9 +17,9 @@ export const CoursesSection = () => {
       "⏰ 30h+ content",
       "🔰 Beginner Friendly"
     ],
-    currentPrice: "₹1299",
-    originalPrice: "₹2598",
-    discountPercentage: "50%"
+    currentPrice: `₹${finalPrice}`,
+    originalPrice: `₹${basePrice}`,
+    discountPercentage: `10%`
   };
 
   return (

@@ -7,7 +7,7 @@ const Certificate = () => {
     <div>
       <main className="flex w-full items-start gap-[54px] relative rounded-[5px] mt-10  bg-[#0c0c0d]">
         {/* Left Side: Certificate Info/Download */}
-        <section className="flex flex-col w-5/12 min-w-[320px] min-h-[800px]  items-start gap-6 p-6 border border-[#1545c2] rounded-[5px] bg-[#101014]">
+        <section className="flex flex-col w-5/12 min-w-[320px] min-h-[600px]  items-start gap-6 p-6 border border-[#1545c2] rounded-[5px] bg-[#101014]">
           <h1 className="text-[32px] font-semibold text-[#0356ff] mb-2">My Certificates</h1>
           <p className="text-base text-[#b9b9b9] mb-6">View and download your course completion certificates.</p>
           {[1,2].map((i) => (

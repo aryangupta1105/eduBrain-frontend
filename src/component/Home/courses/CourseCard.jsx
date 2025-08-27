@@ -9,9 +9,9 @@ const CourseCard = ({ course }) => {
     description,
     lectures,
     duration,
-    originalPrice,
-    discountedPrice,
-    discount
+  originalPrice,
+  discountedPrice,
+  discount
   } = course;
 
   return (
@@ -72,14 +72,10 @@ const CourseCard = ({ course }) => {
           </div>
 
           <div className="flex relative gap-2 justify-center items-center mb-4 w-full max-sm:flex-wrap max-sm:gap-1">
-            <span className="text-base leading-6 text-black line-through">
-              {originalPrice}
-            </span>
-            <span className="text-xl font-bold leading-7 text-black">
-              {discountedPrice}
-            </span>
+            <span className="text-base leading-6 text-black line-through">₹2999</span>
+            <span className="text-xl font-bold leading-7 text-black">₹2700</span>
             <span className="inline-flex justify-center items-center px-2 py-1 rounded-full shadow-sm bg-white bg-opacity-0">
-              <span className="text-xs leading-4 text-black">{discount}</span>
+              <span className="text-xs leading-4 text-green-600">10% OFF</span>
             </span>
           </div>
 

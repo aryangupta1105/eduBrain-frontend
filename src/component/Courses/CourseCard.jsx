@@ -27,7 +27,7 @@ function fixSvgAttributes(svgString) {
   max-sm:w-[90%] max-sm:max-w-[320px] max-sm:mx-auto max-sm:px-3  max-sm:py-2 max-sm:rounded-lg">
 
       <header className="flex relative justify-center items-center h-[200px]">
-        <div className="absolute top-3 right-2 py-2  text-xs font-semibold bg-rose-500 rounded text-[white]">
+        <div className="absolute top-3 right-2 py-2 text-xs font-semibold bg-rose-500 rounded text-[white]">
           {discountPercentage} Off
         </div>
         {isFeatured && (
@@ -59,6 +59,7 @@ function fixSvgAttributes(svgString) {
         <div className="flex gap-2 items-center mb-5">
           <span className="text-xl font-bold text-slate-50 max-sm:text-base">{currentPrice}</span>
           <span className="text-md line-through text-zinc-400 max-sm:text-xs">{originalPrice}</span>
+          <span className="text-xs text-green-400">10% OFF</span>
         </div>
 
   <a href="/course-details" className="p-3 w-full text-base font-semibold rounded-lg cursor-pointer bg-slate-50 border-[none] text-neutral-950 max-sm:text-sm max-sm:p-2 max-sm:rounded-md">

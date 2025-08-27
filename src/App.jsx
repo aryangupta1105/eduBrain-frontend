@@ -22,10 +22,14 @@ import ContactPage from "./component/Contact Us/ContactPage";
 import { BillingPage } from "./component/Billing Page/BillingPage";
 import Home from "./component/Home/Home";
 import Dashboard from "./component/Dashboard/Hero/Dashboard";
-import Profile from "./component/Dashboard/DashboardMain";
+import Profile from "./component/Dashboard/Profile";
 import MainContent from "./component/Dashboard/Hero/MainContent";
 import {MyCourses} from "./component/Dashboard/MyCourses"
 import Certificate from "./component/Dashboard/Certificate";
+import ResumeBuilder from "./component/Dashboard/ResumeBuilder";
+import ReferEarn from "./component/Dashboard/ReferEarn";
+import Mentor from "./component/Dashboard/Mentor";
+import Assignments from "./component/Dashboard/Assignments";
 
 
 export default function App() {
@@ -203,11 +207,11 @@ export default function App() {
       
         { path: "my-profile", element: <Profile /> },
         { path: "mycourses", element: <MyCourses /> },
-        // { path: "assignments", element: <Assignments /> },
+        { path: "assignments", element: <Assignments /> },
         { path: "certificate", element: <Certificate /> },
-        // { path: "resume-builder", element: <ResumeBuilder /> },
-        // { path: "referearn", element: <Referearn /> },
-        // { path: "mentor", element: <Mentor /> },
+        { path: "resume-builder", element: <ResumeBuilder /> },
+        { path: "referearn", element: <ReferEarn /> },
+        { path: "mentor", element: <Mentor /> },
       ],
     },
   ]);

@@ -12,11 +12,11 @@ export const PurchaseSummarySection = () => {
     author: "Aman Singh, Data Analyst",
   };
   const purchaseData = {
-    price: 1299,
-    discount: 129,
+    price: 2999,
+    discount: 300,
     discountPercent: 10,
-    total: 1170,
-    savings: 129,
+    total: 2699,
+    savings: 300,
   };
 
   const handleCouponApply = () => {
