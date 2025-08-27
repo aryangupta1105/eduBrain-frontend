@@ -207,8 +207,8 @@ export default function App() {
       
         { path: "my-profile", element: <Profile /> },
         { path: "mycourses", element: <MyCourses /> },
-        { path: "assignments", element: <Assignments /> },
         { path: "certificate", element: <Certificate /> },
+        { path: "assignments", element: <Assignments /> },
         { path: "resume-builder", element: <ResumeBuilder /> },
         { path: "referearn", element: <ReferEarn /> },
         { path: "mentor", element: <Mentor /> },

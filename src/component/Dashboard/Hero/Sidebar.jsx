@@ -37,10 +37,10 @@ function Sidebar() {
 
   return (
     <aside className="w-1/5 max-md:ml-0 max-md:w-full z-10 fixed  left-0 top-[93px] h-[calc(100vh-89px)]">
-      <nav className="px-2.5 py-5 mx-auto flex flex-col items-center gap-10 w-full border-r bg-[#246bfd]/11 border-blue-600 border-solid h-full max-md:mt-10 ">
-        <div className="flex flex-col justify-center items-start w-full px-10  mx-auto">
+      <nav className="px-2.5 py-5 mx-auto flex flex-col items-center  w-full border-r bg-[#246bfd]/11 border-blue-600 border-solid h-full max-md:mt-10 ">
+       <div className="flex flex-col gap-3 justify-center items-start w-full px-6 mx-auto pb-3">
           {menuItems.map((item, index) => (
-            <div key={index} className={index > 0 ? "mt-8" : ""}>
+         <div key={index} className={index > 0 ? "mt-4" : ""}>
               <SidebarMenuItem
                 icon={item.icon}
                 label={item.label}
