@@ -30,7 +30,7 @@ import ResumeBuilder from "./component/Dashboard/ResumeBuilder";
 import ReferEarn from "./component/Dashboard/ReferEarn";
 import Mentor from "./component/Dashboard/Mentor";
 import Assignments from "./component/Dashboard/Assignments";
-
+import CourseViewer from "./component/Dashboard/Course View/CourseViewer";
 
 export default function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -200,11 +200,18 @@ export default function App() {
       ),
     },
     {
+      path: "/view-course",
+      element: (
+        <ModalWrapper>
+          <CourseViewer />
+        </ModalWrapper>
+      ),
+    },
+    {
       path: "/profile-dashboard",
       element: <Dashboard />, // Dashboard handles its own navbar and sidebar
       children: [
         { index: true, element: <MainContent /> },
-      
         { path: "my-profile", element: <Profile /> },
         { path: "mycourses", element: <MyCourses /> },
         { path: "certificate", element: <Certificate /> },
@@ -214,6 +221,7 @@ export default function App() {
         { path: "mentor", element: <Mentor /> },
       ],
     },
+    
   ]);
 
   return <RouterProvider router={router} />;
