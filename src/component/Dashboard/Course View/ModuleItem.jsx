@@ -4,7 +4,7 @@ const ModuleItem = ({ title = "Module 1: Introduction", duration = "5m 36s | 1 l
   return (
     <div className="w-full">
       <button
-        className="flex gap-2 items-center px-3.5 py-2.5 w-full rounded-xl border-blue-800 border-solid backdrop-blur-[22.8px] bg-blue-800 bg-opacity-10 border-[0.83px] focus:outline-none"
+        className="flex gap-2 items-center px-3.5 py-2.5 w-full rounded-xl border-blue-800 border-solid backdrop-blur-[22.8px] bg-blue-800/10  bg-opacity-10 border-[0.83px] focus:outline-none"
         onClick={onClick}
         type="button"
       >

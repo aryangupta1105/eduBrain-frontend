@@ -20,7 +20,7 @@ const CourseResources = () => {
 
   return (
     <aside className="flex flex-col justify-between items-start min-h-[762px] max-md:w-full mx-auto" style={{ width: 407, maxWidth: '100%' }}>
-      <div className="flex flex-col gap-5 items-start p-5 bg-gray-900 rounded-xl border border-blue-600 border-solid  w-full max-md:w-full">
+      <div className="flex flex-col gap-5 items-start p-5 bg-blue-800/10 rounded-xl border border-blue-600 border-solid  w-full max-md:w-full">
         <h2 className="overflow-hidden w-full text-2xl font-medium leading-10 text-white text-ellipsis max-sm:text-xl">
           Course Resources
         </h2>
